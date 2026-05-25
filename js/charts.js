@@ -448,6 +448,125 @@
     }, String(maxSeason)));
   }
 
+  // ============================================================
+  // CHART: WAE year-over-year persistence (robustness for skill ranking)
+  // ============================================================
+  function chartWAEPersistence(target, teamSeasonSkill) {
+    const W=1240, H=720;
+    const svg = mountSVG(target, W, H);
+    chartTitle(svg, 60, 30, W-120, "5b",
+      "Robustness · 750 team-year pairs",
+      "Last year's WAE predicts this year's WAE",
+      "Year-over-year correlation = 0.49, well outside the shuffled-year null"
+    );
+
+    // Build lag-1 (WAE_t, WAE_{t+1}) pairs, plus highlight series
+    const byTeam = new Map();
+    for (const r of teamSeasonSkill) {
+      if (!byTeam.has(r.team)) byTeam.set(r.team, new Map());
+      byTeam.get(r.team).set(+r.season, +r.wins_above_expected);
+    }
+    const pairs = [];
+    for (const [, m] of byTeam) {
+      for (const [s, v] of m) {
+        if (m.has(s + 1)) pairs.push([v, m.get(s + 1)]);
+      }
+    }
+
+    const M = { l: 100, r: 40, t: 160, b: 80 };
+    const plotW = W - M.l - M.r, plotH = H - M.t - M.b;
+
+    // Symmetric square domain so y=x reads honestly
+    let absMax = 0;
+    for (const [a,b] of pairs) absMax = Math.max(absMax, Math.abs(a), Math.abs(b));
+    const bound = Math.ceil(absMax / 5) * 5;
+    const xDomain = [-bound, bound];
+    const yDomain = [-bound, bound];
+    const sx = scale(xDomain, [M.l, M.l + plotW]);
+    const sy = scale(yDomain, [M.t + plotH, M.t]);
+
+    svg.appendChild(el("rect", { x:M.l, y:M.t, width:plotW, height:plotH, fill:THEME.paper2, opacity:0.5 }));
+
+    const ticks = [-30, -20, -10, 0, 10, 20, 30].filter(t => t >= -bound && t <= bound);
+    gridX(svg, M.l, M.t, plotW, plotH, sx, ticks, v => (v>0?"+":"")+v);
+    gridY(svg, M.l, M.t, plotW, plotH, sy, ticks, v => (v>0?"+":"")+v);
+
+    axisLabel(svg, M.l, H-30, "WAE in season T");
+    svg.appendChild(el("g", { transform:`translate(30,${M.t+plotH/2}) rotate(-90)` }, [
+      el("text", {
+        "font-family":THEME.mono, "font-size":10, "font-weight":600,
+        "letter-spacing":"0.14em", fill:THEME.ink3, "text-anchor":"middle",
+      }, "WAE IN SEASON T+1")
+    ]));
+
+    // y = x reference (faint) — what perfect persistence would look like
+    svg.appendChild(el("line", {
+      x1: sx(-bound), y1: sy(-bound), x2: sx(bound), y2: sy(bound),
+      stroke: THEME.ink3, "stroke-width": 0.8, "stroke-dasharray": "3 5", opacity: 0.35
+    }));
+
+    // Scatter
+    const ptsG = el("g", { opacity: 0.55 });
+    for (const [a, b] of pairs) {
+      ptsG.appendChild(el("circle", {
+        cx: sx(a), cy: sy(b), r: 3.2, fill: THEME.ink2,
+        stroke: THEME.ink, "stroke-width": 0.2, "stroke-opacity": 0.4
+      }));
+    }
+    svg.appendChild(ptsG);
+
+    // OLS fit + Pearson r
+    let n=0, sxx=0, sxy=0, sxsum=0, sysum=0, syy=0;
+    for (const [a, b] of pairs) {
+      sxsum += a; sysum += b; sxx += a*a; sxy += a*b; syy += b*b; n++;
+    }
+    const slope = (n*sxy - sxsum*sysum) / (n*sxx - sxsum*sxsum);
+    const intercept = (sysum - slope*sxsum) / n;
+    const r = (n*sxy - sxsum*sysum) /
+              Math.sqrt((n*sxx - sxsum*sxsum) * (n*syy - sysum*sysum));
+
+    const x1 = xDomain[0], x2 = xDomain[1];
+    svg.appendChild(el("line", {
+      x1: sx(x1), y1: sy(slope*x1 + intercept),
+      x2: sx(x2), y2: sy(slope*x2 + intercept),
+      stroke: THEME.accent, "stroke-width": 2.6
+    }));
+
+    // Annotation: r value + null band
+    const annW = 380, annH = 110;
+    const annX = M.l + 16;
+    const annY = M.t + 16;
+    svg.appendChild(el("rect", {
+      x: annX, y: annY, width: annW, height: annH,
+      fill: THEME.paper, stroke: THEME.rule2, "stroke-width": 1
+    }));
+    svg.appendChild(el("text", {
+      x: annX+16, y: annY+24,
+      "font-family":THEME.mono, "font-size":10, "font-weight":700,
+      "letter-spacing":"0.14em", fill:THEME.accent
+    }, "LAG-1 AUTOCORRELATION OF WAE"));
+    svg.appendChild(el("text", {
+      x: annX+16, y: annY+60,
+      "font-family":THEME.mono, "font-size":28, "font-weight":700, fill: THEME.ink,
+      "font-variant-numeric":"tabular-nums"
+    }, `r = ${r.toFixed(3)}`));
+    svg.appendChild(el("text", {
+      x: annX+16, y: annY+84,
+      "font-family":THEME.mono, "font-size":11, fill: THEME.ink3
+    }, `n = ${n} team-year pairs`));
+    svg.appendChild(el("text", {
+      x: annX+16, y: annY+100,
+      "font-family":THEME.mono, "font-size":11, fill: THEME.ink3
+    }, `null band (95%): 0.04 – 0.17 · p ≈ 0`));
+
+    // Dashed y=x label
+    svg.appendChild(el("text", {
+      x: sx(bound) - 14, y: sy(bound) + 22, "text-anchor":"end",
+      "font-family":THEME.mono, "font-size":10, fill: THEME.ink3,
+      "font-style":"italic"
+    }, "y = x  (perfect persistence)"));
+  }
+
   function lerpColor(a, b, t) {
     const pa = hex(a), pb = hex(b);
     const r = Math.round(pa[0]+(pb[0]-pa[0])*t);
@@ -1057,6 +1176,7 @@
         "money":       (t) => chartWhatMoneyBuys(t, teamSeason, playoffs, wsWinners),
         "skill":       (t) => chartFranchiseSkill(t, ranking, teamSeasonSkill),
         "dpw":         (t) => chartDollarsPerWin(t, ranked),
+        "waepersist":  (t) => chartWAEPersistence(t, teamSeasonSkill),
         "quadrants":   (t) => chartQuadrants(t, teamSeason, ranking),
         "extremes":    (t) => chartExtremeSeasons(t, teamSeasonSkill),
       };

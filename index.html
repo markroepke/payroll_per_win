@@ -1166,6 +1166,17 @@
           <p>Same direction as the skill ranking, but very different teams at the top. The Pirates rank #4 by $ per win and the Marlins rank #3 — both look like efficient operators. They're not. The problem with $ per win is that it rewards being <em>cheap</em> almost as much as it rewards being <em>good</em>. A team that pays $50M and wins 70 games has a $ per win of $714K; a team that pays $250M and wins 95 games has a $ per win of $2.63M. The cheap team looks 3.7× more "efficient" — but the cheap team is losing 92 games.</p>
           <p>That's exactly what's happening at the top of the nominal ranking. The Pirates' 26-year average payroll is around $58M and their average win total is 74. The Marlins' average is $57M and 73 wins. Both teams sit in the top five by $ per win because they keep paying for the league's worst rosters. <strong>It's not skill — it's surrender.</strong></p>
         </div>
+
+        <div class="callout">
+          <div class="callout-label">Robustness Check</div>
+          <h4>Persistent luck or true front-office skill?</h4>
+          <p>A 26-year average WAE could in principle be a long streak of luck. To check whether the ranking is real, we ask a simple question: does last season's WAE predict this season's? If front-office skill is structural, year-over-year WAE should be positively correlated. If it's stretched-out noise, it shouldn't be.</p>
+          <figure class="chart narrow" style="margin: 24px 0;">
+            <div class="chart-svg loading" data-chart="waepersist">Loading…</div>
+          </figure>
+          <p>The pooled lag-1 correlation is <strong>r = 0.49</strong> across 750 team-year pairs — well outside the null band of 0.04–0.17 we get from shuffling year-labels within each franchise (p ≈ 0). The signal decays gradually (lag-2: 0.30; lag-3: 0.13; lag-5: ≈ 0), consistent with front-office regimes that last roughly three to five years before turning over. <strong>The ranking isn't a random walk</strong> — there is structure here.</p>
+          <p>But not every franchise behaves the same. The Astros (per-team r = 0.68) and Rays (0.67) anchor one end with very persistent WAE — coherent multi-year regimes. The Yankees (−0.03) and Red Sox (−0.02) sit at the other, with essentially zero year-over-year carry. One reading: when you spend at the top of the market, you can reload your roster every offseason and last year's over/under-performance doesn't constrain you. Smaller-market teams hold roster decisions across years, so their regimes show up as multi-year WAE streaks. The structure exists; it just lives in different places for different teams.</p>
+        </div>
       </section>
 
       <!-- ============== SECTION 5 ============== -->
