@@ -1,0 +1,781 @@
+season,team,wins,losses,games,prorated_wins,runs_scored,runs_allowed
+2000,Arizona Diamondbacks,85,77,162,85.0,792,754
+2000,Atlanta Braves,95,67,162,95.0,810,714
+2000,Baltimore Orioles,74,88,162,74.0,794,913
+2000,Boston Red Sox,85,77,162,85.0,792,745
+2000,Chicago Cubs,65,97,162,65.0,764,904
+2000,Chicago White Sox,95,67,162,95.0,978,839
+2000,Cincinnati Reds,85,77,162,85.0,825,765
+2000,Cleveland Guardians,90,72,162,90.0,950,816
+2000,Colorado Rockies,82,80,162,82.0,968,897
+2000,Detroit Tigers,79,83,162,79.0,823,827
+2000,Houston Astros,72,90,162,72.0,938,944
+2000,Kansas City Royals,77,85,162,77.0,879,930
+2000,Los Angeles Angels,82,80,162,82.0,864,869
+2000,Los Angeles Dodgers,86,76,162,86.0,798,729
+2000,Miami Marlins,79,82,161,79.0,731,797
+2000,Milwaukee Brewers,73,89,162,73.0,740,826
+2000,Minnesota Twins,69,93,162,69.0,748,880
+2000,New York Mets,94,68,162,94.0,807,738
+2000,New York Yankees,87,74,161,87.0,871,814
+2000,Oakland Athletics,91,70,161,91.0,947,813
+2000,Philadelphia Phillies,65,97,162,65.0,708,830
+2000,Pittsburgh Pirates,69,93,162,69.0,793,888
+2000,San Diego Padres,76,86,162,76.0,752,815
+2000,San Francisco Giants,97,65,162,97.0,925,747
+2000,Seattle Mariners,91,71,162,91.0,907,780
+2000,St. Louis Cardinals,95,67,162,95.0,887,771
+2000,Tampa Bay Rays,69,92,161,69.0,733,842
+2000,Texas Rangers,71,91,162,71.0,848,974
+2000,Toronto Blue Jays,83,79,162,83.0,861,908
+2000,Washington Nationals,67,95,162,67.0,738,902
+2001,Arizona Diamondbacks,92,70,162,92.0,818,677
+2001,Atlanta Braves,88,74,162,88.0,729,643
+2001,Baltimore Orioles,63,98,161,63.0,687,829
+2001,Boston Red Sox,82,79,161,82.0,772,745
+2001,Chicago Cubs,88,74,162,88.0,777,701
+2001,Chicago White Sox,83,79,162,83.0,798,795
+2001,Cincinnati Reds,66,96,162,66.0,735,850
+2001,Cleveland Guardians,91,71,162,91.0,897,821
+2001,Colorado Rockies,73,89,162,73.0,923,906
+2001,Detroit Tigers,66,96,162,66.0,724,876
+2001,Houston Astros,93,69,162,93.0,847,769
+2001,Kansas City Royals,65,97,162,65.0,729,858
+2001,Los Angeles Angels,75,87,162,75.0,691,730
+2001,Los Angeles Dodgers,86,76,162,86.0,758,744
+2001,Miami Marlins,76,86,162,76.0,742,744
+2001,Milwaukee Brewers,68,94,162,68.0,740,806
+2001,Minnesota Twins,85,77,162,85.0,771,766
+2001,New York Mets,82,80,162,82.0,642,713
+2001,New York Yankees,95,65,160,95.0,804,713
+2001,Oakland Athletics,102,60,162,102.0,884,645
+2001,Philadelphia Phillies,86,76,162,86.0,746,719
+2001,Pittsburgh Pirates,62,100,162,62.0,657,858
+2001,San Diego Padres,79,83,162,79.0,789,812
+2001,San Francisco Giants,90,72,162,90.0,799,748
+2001,Seattle Mariners,116,46,162,116.0,927,627
+2001,St. Louis Cardinals,93,69,162,93.0,814,684
+2001,Tampa Bay Rays,62,100,162,62.0,672,887
+2001,Texas Rangers,73,89,162,73.0,890,968
+2001,Toronto Blue Jays,80,82,162,80.0,767,753
+2001,Washington Nationals,68,94,162,68.0,670,812
+2002,Arizona Diamondbacks,98,64,162,98.0,819,674
+2002,Atlanta Braves,101,59,160,101.0,708,565
+2002,Baltimore Orioles,67,95,162,67.0,667,773
+2002,Boston Red Sox,93,69,162,93.0,859,665
+2002,Chicago Cubs,67,95,162,67.0,706,759
+2002,Chicago White Sox,81,81,162,81.0,856,798
+2002,Cincinnati Reds,78,84,162,78.0,709,774
+2002,Cleveland Guardians,74,88,162,74.0,739,837
+2002,Colorado Rockies,73,89,162,73.0,778,898
+2002,Detroit Tigers,55,106,161,55.0,575,864
+2002,Houston Astros,84,78,162,84.0,749,695
+2002,Kansas City Royals,62,100,162,62.0,737,891
+2002,Los Angeles Angels,99,63,162,99.0,851,644
+2002,Los Angeles Dodgers,92,70,162,92.0,713,643
+2002,Miami Marlins,79,83,162,79.0,699,763
+2002,Milwaukee Brewers,56,106,162,56.0,627,821
+2002,Minnesota Twins,94,67,161,94.0,768,712
+2002,New York Mets,75,86,161,75.0,690,703
+2002,New York Yankees,103,58,161,103.0,897,697
+2002,Oakland Athletics,103,59,162,103.0,800,654
+2002,Philadelphia Phillies,80,81,161,80.0,710,724
+2002,Pittsburgh Pirates,72,89,161,72.0,641,730
+2002,San Diego Padres,66,96,162,66.0,662,815
+2002,San Francisco Giants,95,66,161,95.0,783,616
+2002,Seattle Mariners,93,69,162,93.0,814,699
+2002,St. Louis Cardinals,97,65,162,97.0,787,648
+2002,Tampa Bay Rays,55,106,161,55.0,673,918
+2002,Texas Rangers,72,90,162,72.0,843,882
+2002,Toronto Blue Jays,78,84,162,78.0,813,828
+2002,Washington Nationals,83,79,162,83.0,735,718
+2003,Arizona Diamondbacks,84,78,162,84.0,717,685
+2003,Atlanta Braves,101,61,162,101.0,907,740
+2003,Baltimore Orioles,71,91,162,71.0,743,820
+2003,Boston Red Sox,95,67,162,95.0,961,809
+2003,Chicago Cubs,88,74,162,88.0,724,683
+2003,Chicago White Sox,86,76,162,86.0,791,715
+2003,Cincinnati Reds,69,93,162,69.0,694,886
+2003,Cleveland Guardians,68,94,162,68.0,699,778
+2003,Colorado Rockies,74,88,162,74.0,853,892
+2003,Detroit Tigers,43,119,162,43.0,591,928
+2003,Houston Astros,87,75,162,87.0,805,677
+2003,Kansas City Royals,83,79,162,83.0,836,867
+2003,Los Angeles Angels,77,85,162,77.0,736,743
+2003,Los Angeles Dodgers,85,77,162,85.0,574,556
+2003,Miami Marlins,91,71,162,91.0,751,692
+2003,Milwaukee Brewers,68,94,162,68.0,714,873
+2003,Minnesota Twins,90,72,162,90.0,801,758
+2003,New York Mets,66,95,161,66.0,642,754
+2003,New York Yankees,101,61,162,101.0,877,716
+2003,Oakland Athletics,96,66,162,96.0,768,643
+2003,Philadelphia Phillies,86,76,162,86.0,791,697
+2003,Pittsburgh Pirates,75,87,162,75.0,753,801
+2003,San Diego Padres,64,98,162,64.0,678,831
+2003,San Francisco Giants,100,61,161,100.0,755,638
+2003,Seattle Mariners,93,69,162,93.0,795,637
+2003,St. Louis Cardinals,85,77,162,85.0,876,796
+2003,Tampa Bay Rays,63,99,162,63.0,715,852
+2003,Texas Rangers,71,91,162,71.0,826,969
+2003,Toronto Blue Jays,86,76,162,86.0,894,826
+2003,Washington Nationals,83,79,162,83.0,711,716
+2004,Arizona Diamondbacks,51,111,162,51.0,615,899
+2004,Atlanta Braves,96,66,162,96.0,803,668
+2004,Baltimore Orioles,78,84,162,78.0,842,830
+2004,Boston Red Sox,98,64,162,98.0,949,768
+2004,Chicago Cubs,89,73,162,89.0,789,665
+2004,Chicago White Sox,83,79,162,83.0,865,831
+2004,Cincinnati Reds,76,86,162,76.0,750,907
+2004,Cleveland Guardians,80,82,162,80.0,858,857
+2004,Colorado Rockies,68,94,162,68.0,833,923
+2004,Detroit Tigers,72,90,162,72.0,827,844
+2004,Houston Astros,92,70,162,92.0,803,698
+2004,Kansas City Royals,58,104,162,58.0,720,905
+2004,Los Angeles Angels,92,70,162,92.0,836,734
+2004,Los Angeles Dodgers,93,69,162,93.0,761,684
+2004,Miami Marlins,83,79,162,83.0,718,700
+2004,Milwaukee Brewers,67,94,161,67.0,634,757
+2004,Minnesota Twins,92,70,162,92.0,780,715
+2004,New York Mets,71,91,162,71.0,684,731
+2004,New York Yankees,101,61,162,101.0,897,808
+2004,Oakland Athletics,91,71,162,91.0,793,742
+2004,Philadelphia Phillies,86,76,162,86.0,840,781
+2004,Pittsburgh Pirates,72,89,161,72.0,680,744
+2004,San Diego Padres,87,75,162,87.0,768,705
+2004,San Francisco Giants,91,71,162,91.0,850,770
+2004,Seattle Mariners,63,99,162,63.0,698,823
+2004,St. Louis Cardinals,105,57,162,105.0,855,659
+2004,Tampa Bay Rays,70,91,161,70.0,714,842
+2004,Texas Rangers,89,73,162,89.0,860,794
+2004,Toronto Blue Jays,67,94,161,67.0,719,823
+2004,Washington Nationals,67,95,162,67.0,635,769
+2005,Arizona Diamondbacks,77,85,162,77.0,696,856
+2005,Atlanta Braves,90,72,162,90.0,769,674
+2005,Baltimore Orioles,74,88,162,74.0,729,800
+2005,Boston Red Sox,95,67,162,95.0,910,805
+2005,Chicago Cubs,79,83,162,79.0,703,714
+2005,Chicago White Sox,99,63,162,99.0,741,645
+2005,Cincinnati Reds,73,89,162,73.0,820,889
+2005,Cleveland Guardians,93,69,162,93.0,790,642
+2005,Colorado Rockies,67,95,162,67.0,740,862
+2005,Detroit Tigers,71,91,162,71.0,723,787
+2005,Houston Astros,89,73,162,89.0,693,609
+2005,Kansas City Royals,56,106,162,56.0,701,935
+2005,Los Angeles Angels,95,67,162,95.0,761,643
+2005,Los Angeles Dodgers,71,91,162,71.0,685,755
+2005,Miami Marlins,83,79,162,83.0,717,732
+2005,Milwaukee Brewers,81,81,162,81.0,726,697
+2005,Minnesota Twins,83,79,162,83.0,688,662
+2005,New York Mets,83,79,162,83.0,722,648
+2005,New York Yankees,95,67,162,95.0,886,789
+2005,Oakland Athletics,88,74,162,88.0,772,658
+2005,Philadelphia Phillies,88,74,162,88.0,807,726
+2005,Pittsburgh Pirates,67,95,162,67.0,680,769
+2005,San Diego Padres,82,80,162,82.0,684,726
+2005,San Francisco Giants,75,87,162,75.0,649,745
+2005,Seattle Mariners,69,93,162,69.0,699,751
+2005,St. Louis Cardinals,100,62,162,100.0,805,634
+2005,Tampa Bay Rays,67,95,162,67.0,750,936
+2005,Texas Rangers,79,83,162,79.0,865,858
+2005,Toronto Blue Jays,80,82,162,80.0,775,705
+2005,Washington Nationals,81,81,162,81.0,639,673
+2006,Arizona Diamondbacks,76,86,162,76.0,773,788
+2006,Atlanta Braves,79,83,162,79.0,849,805
+2006,Baltimore Orioles,70,92,162,70.0,768,899
+2006,Boston Red Sox,86,76,162,86.0,820,825
+2006,Chicago Cubs,66,96,162,66.0,716,834
+2006,Chicago White Sox,90,72,162,90.0,868,794
+2006,Cincinnati Reds,80,82,162,80.0,749,801
+2006,Cleveland Guardians,78,84,162,78.0,870,782
+2006,Colorado Rockies,76,86,162,76.0,813,812
+2006,Detroit Tigers,95,67,162,95.0,822,675
+2006,Houston Astros,82,80,162,82.0,735,719
+2006,Kansas City Royals,62,100,162,62.0,757,971
+2006,Los Angeles Angels,89,73,162,89.0,766,732
+2006,Los Angeles Dodgers,88,74,162,88.0,820,751
+2006,Miami Marlins,78,84,162,78.0,758,772
+2006,Milwaukee Brewers,75,87,162,75.0,730,833
+2006,Minnesota Twins,96,66,162,96.0,801,683
+2006,New York Mets,97,65,162,97.0,834,731
+2006,New York Yankees,97,65,162,97.0,930,767
+2006,Oakland Athletics,93,69,162,93.0,771,727
+2006,Philadelphia Phillies,85,77,162,85.0,865,812
+2006,Pittsburgh Pirates,67,95,162,67.0,691,797
+2006,San Diego Padres,88,74,162,88.0,731,679
+2006,San Francisco Giants,76,85,161,76.0,746,790
+2006,Seattle Mariners,78,84,162,78.0,756,792
+2006,St. Louis Cardinals,83,78,161,83.0,781,762
+2006,Tampa Bay Rays,61,101,162,61.0,689,856
+2006,Texas Rangers,80,82,162,80.0,835,784
+2006,Toronto Blue Jays,87,75,162,87.0,809,754
+2006,Washington Nationals,71,91,162,71.0,746,872
+2007,Arizona Diamondbacks,90,72,162,90.0,712,732
+2007,Atlanta Braves,84,78,162,84.0,810,733
+2007,Baltimore Orioles,69,93,162,69.0,756,868
+2007,Boston Red Sox,96,66,162,96.0,867,657
+2007,Chicago Cubs,85,77,162,85.0,752,690
+2007,Chicago White Sox,72,90,162,72.0,693,839
+2007,Cincinnati Reds,72,90,162,72.0,783,853
+2007,Cleveland Guardians,96,66,162,96.0,811,704
+2007,Colorado Rockies,90,73,163,90.0,860,758
+2007,Detroit Tigers,88,74,162,88.0,887,797
+2007,Houston Astros,73,89,162,73.0,723,813
+2007,Kansas City Royals,69,93,162,69.0,706,778
+2007,Los Angeles Angels,94,68,162,94.0,822,731
+2007,Los Angeles Dodgers,82,80,162,82.0,735,727
+2007,Miami Marlins,71,91,162,71.0,790,891
+2007,Milwaukee Brewers,83,79,162,83.0,801,776
+2007,Minnesota Twins,79,83,162,79.0,718,725
+2007,New York Mets,88,74,162,88.0,804,750
+2007,New York Yankees,94,68,162,94.0,968,777
+2007,Oakland Athletics,76,86,162,76.0,741,758
+2007,Philadelphia Phillies,89,73,162,89.0,892,821
+2007,Pittsburgh Pirates,68,94,162,68.0,724,846
+2007,San Diego Padres,89,74,163,89.0,741,666
+2007,San Francisco Giants,71,91,162,71.0,683,720
+2007,Seattle Mariners,88,74,162,88.0,794,813
+2007,St. Louis Cardinals,78,84,162,78.0,725,829
+2007,Tampa Bay Rays,66,96,162,66.0,782,944
+2007,Texas Rangers,75,87,162,75.0,816,844
+2007,Toronto Blue Jays,83,79,162,83.0,753,699
+2007,Washington Nationals,73,89,162,73.0,673,783
+2008,Arizona Diamondbacks,82,80,162,82.0,720,706
+2008,Atlanta Braves,72,90,162,72.0,753,778
+2008,Baltimore Orioles,68,93,161,68.0,782,869
+2008,Boston Red Sox,95,67,162,95.0,845,694
+2008,Chicago Cubs,97,64,161,97.0,855,671
+2008,Chicago White Sox,89,74,163,89.0,811,729
+2008,Cincinnati Reds,74,88,162,74.0,704,800
+2008,Cleveland Guardians,81,81,162,81.0,805,761
+2008,Colorado Rockies,74,88,162,74.0,747,822
+2008,Detroit Tigers,74,88,162,74.0,821,857
+2008,Houston Astros,86,75,161,86.0,712,743
+2008,Kansas City Royals,75,87,162,75.0,691,781
+2008,Los Angeles Angels,100,62,162,100.0,765,697
+2008,Los Angeles Dodgers,84,78,162,84.0,700,648
+2008,Miami Marlins,84,77,161,84.0,770,767
+2008,Milwaukee Brewers,90,72,162,90.0,750,689
+2008,Minnesota Twins,88,75,163,88.0,829,745
+2008,New York Mets,89,73,162,89.0,799,715
+2008,New York Yankees,89,73,162,89.0,789,727
+2008,Oakland Athletics,75,86,161,75.0,646,690
+2008,Philadelphia Phillies,92,70,162,92.0,799,680
+2008,Pittsburgh Pirates,67,95,162,67.0,735,884
+2008,San Diego Padres,63,99,162,63.0,637,764
+2008,San Francisco Giants,72,90,162,72.0,640,759
+2008,Seattle Mariners,61,101,162,61.0,671,811
+2008,St. Louis Cardinals,86,76,162,86.0,779,725
+2008,Tampa Bay Rays,97,65,162,97.0,774,671
+2008,Texas Rangers,79,83,162,79.0,901,967
+2008,Toronto Blue Jays,86,76,162,86.0,714,610
+2008,Washington Nationals,59,102,161,59.0,641,825
+2009,Arizona Diamondbacks,70,92,162,70.0,720,782
+2009,Atlanta Braves,86,76,162,86.0,735,641
+2009,Baltimore Orioles,64,98,162,64.0,741,876
+2009,Boston Red Sox,95,67,162,95.0,872,736
+2009,Chicago Cubs,83,78,161,83.0,707,672
+2009,Chicago White Sox,79,83,162,79.0,724,732
+2009,Cincinnati Reds,78,84,162,78.0,673,723
+2009,Cleveland Guardians,65,97,162,65.0,773,865
+2009,Colorado Rockies,92,70,162,92.0,804,715
+2009,Detroit Tigers,86,77,163,86.0,743,745
+2009,Houston Astros,74,88,162,74.0,643,770
+2009,Kansas City Royals,65,97,162,65.0,686,842
+2009,Los Angeles Angels,97,65,162,97.0,883,761
+2009,Los Angeles Dodgers,95,67,162,95.0,780,611
+2009,Miami Marlins,87,75,162,87.0,772,766
+2009,Milwaukee Brewers,80,82,162,80.0,785,818
+2009,Minnesota Twins,87,76,163,87.0,817,765
+2009,New York Mets,70,92,162,70.0,671,757
+2009,New York Yankees,103,59,162,103.0,915,753
+2009,Oakland Athletics,75,87,162,75.0,759,761
+2009,Philadelphia Phillies,93,69,162,93.0,820,709
+2009,Pittsburgh Pirates,62,99,161,62.0,636,768
+2009,San Diego Padres,75,87,162,75.0,638,769
+2009,San Francisco Giants,88,74,162,88.0,657,611
+2009,Seattle Mariners,85,77,162,85.0,640,692
+2009,St. Louis Cardinals,91,71,162,91.0,730,640
+2009,Tampa Bay Rays,84,78,162,84.0,803,754
+2009,Texas Rangers,87,75,162,87.0,784,740
+2009,Toronto Blue Jays,75,87,162,75.0,798,771
+2009,Washington Nationals,59,103,162,59.0,710,874
+2010,Arizona Diamondbacks,65,97,162,65.0,713,836
+2010,Atlanta Braves,91,71,162,91.0,738,629
+2010,Baltimore Orioles,66,96,162,66.0,613,785
+2010,Boston Red Sox,89,73,162,89.0,818,744
+2010,Chicago Cubs,75,87,162,75.0,685,767
+2010,Chicago White Sox,88,74,162,88.0,752,704
+2010,Cincinnati Reds,91,71,162,91.0,790,685
+2010,Cleveland Guardians,69,93,162,69.0,646,752
+2010,Colorado Rockies,83,79,162,83.0,770,717
+2010,Detroit Tigers,81,81,162,81.0,751,743
+2010,Houston Astros,76,86,162,76.0,611,729
+2010,Kansas City Royals,67,95,162,67.0,676,845
+2010,Los Angeles Angels,80,82,162,80.0,681,702
+2010,Los Angeles Dodgers,80,82,162,80.0,667,692
+2010,Miami Marlins,80,82,162,80.0,719,717
+2010,Milwaukee Brewers,77,85,162,77.0,750,804
+2010,Minnesota Twins,94,68,162,94.0,781,671
+2010,New York Mets,79,83,162,79.0,656,652
+2010,New York Yankees,95,67,162,95.0,859,693
+2010,Oakland Athletics,81,81,162,81.0,663,626
+2010,Philadelphia Phillies,97,65,162,97.0,772,640
+2010,Pittsburgh Pirates,57,105,162,57.0,587,866
+2010,San Diego Padres,90,72,162,90.0,665,581
+2010,San Francisco Giants,92,70,162,92.0,697,583
+2010,Seattle Mariners,61,101,162,61.0,513,698
+2010,St. Louis Cardinals,86,76,162,86.0,736,641
+2010,Tampa Bay Rays,96,66,162,96.0,802,649
+2010,Texas Rangers,90,72,162,90.0,787,687
+2010,Toronto Blue Jays,85,77,162,85.0,755,728
+2010,Washington Nationals,69,93,162,69.0,655,742
+2011,Arizona Diamondbacks,94,68,162,94.0,731,662
+2011,Atlanta Braves,89,73,162,89.0,641,605
+2011,Baltimore Orioles,69,93,162,69.0,708,860
+2011,Boston Red Sox,90,72,162,90.0,875,737
+2011,Chicago Cubs,71,91,162,71.0,654,756
+2011,Chicago White Sox,79,83,162,79.0,654,706
+2011,Cincinnati Reds,79,83,162,79.0,735,720
+2011,Cleveland Guardians,80,82,162,80.0,704,760
+2011,Colorado Rockies,73,89,162,73.0,735,774
+2011,Detroit Tigers,95,67,162,95.0,787,711
+2011,Houston Astros,56,106,162,56.0,615,796
+2011,Kansas City Royals,71,91,162,71.0,730,762
+2011,Los Angeles Angels,86,76,162,86.0,667,633
+2011,Los Angeles Dodgers,82,79,161,82.0,644,612
+2011,Miami Marlins,72,90,162,72.0,625,702
+2011,Milwaukee Brewers,96,66,162,96.0,721,638
+2011,Minnesota Twins,63,99,162,63.0,619,804
+2011,New York Mets,77,85,162,77.0,718,742
+2011,New York Yankees,97,65,162,97.0,867,657
+2011,Oakland Athletics,74,88,162,74.0,645,679
+2011,Philadelphia Phillies,102,60,162,102.0,713,529
+2011,Pittsburgh Pirates,72,90,162,72.0,610,712
+2011,San Diego Padres,71,91,162,71.0,593,611
+2011,San Francisco Giants,86,76,162,86.0,570,578
+2011,Seattle Mariners,67,95,162,67.0,556,675
+2011,St. Louis Cardinals,90,72,162,90.0,762,692
+2011,Tampa Bay Rays,91,71,162,91.0,707,614
+2011,Texas Rangers,96,66,162,96.0,855,677
+2011,Toronto Blue Jays,81,81,162,81.0,743,761
+2011,Washington Nationals,80,81,161,80.0,624,643
+2012,Arizona Diamondbacks,81,81,162,81.0,734,688
+2012,Atlanta Braves,94,68,162,94.0,700,600
+2012,Baltimore Orioles,93,69,162,93.0,712,705
+2012,Boston Red Sox,69,93,162,69.0,734,806
+2012,Chicago Cubs,61,101,162,61.0,613,759
+2012,Chicago White Sox,85,77,162,85.0,748,676
+2012,Cincinnati Reds,97,65,162,97.0,669,588
+2012,Cleveland Guardians,68,94,162,68.0,667,845
+2012,Colorado Rockies,64,98,162,64.0,758,890
+2012,Detroit Tigers,88,74,162,88.0,726,670
+2012,Houston Astros,55,107,162,55.0,583,794
+2012,Kansas City Royals,72,90,162,72.0,676,746
+2012,Los Angeles Angels,89,73,162,89.0,767,699
+2012,Los Angeles Dodgers,86,76,162,86.0,637,597
+2012,Miami Marlins,69,93,162,69.0,609,724
+2012,Milwaukee Brewers,83,79,162,83.0,776,733
+2012,Minnesota Twins,66,96,162,66.0,701,832
+2012,New York Mets,74,88,162,74.0,650,709
+2012,New York Yankees,95,67,162,95.0,804,668
+2012,Oakland Athletics,94,68,162,94.0,713,614
+2012,Philadelphia Phillies,81,81,162,81.0,684,680
+2012,Pittsburgh Pirates,79,83,162,79.0,651,674
+2012,San Diego Padres,76,86,162,76.0,651,710
+2012,San Francisco Giants,94,68,162,94.0,718,649
+2012,Seattle Mariners,75,87,162,75.0,619,651
+2012,St. Louis Cardinals,88,74,162,88.0,765,648
+2012,Tampa Bay Rays,90,72,162,90.0,697,577
+2012,Texas Rangers,93,69,162,93.0,808,707
+2012,Toronto Blue Jays,73,89,162,73.0,716,784
+2012,Washington Nationals,98,64,162,98.0,731,594
+2013,Arizona Diamondbacks,81,81,162,81.0,685,695
+2013,Atlanta Braves,96,66,162,96.0,688,548
+2013,Baltimore Orioles,85,77,162,85.0,745,709
+2013,Boston Red Sox,97,65,162,97.0,853,656
+2013,Chicago Cubs,66,96,162,66.0,602,689
+2013,Chicago White Sox,63,99,162,63.0,598,723
+2013,Cincinnati Reds,90,72,162,90.0,698,589
+2013,Cleveland Guardians,92,70,162,92.0,745,662
+2013,Colorado Rockies,74,88,162,74.0,706,760
+2013,Detroit Tigers,93,69,162,93.0,796,624
+2013,Houston Astros,51,111,162,51.0,610,848
+2013,Kansas City Royals,86,76,162,86.0,648,601
+2013,Los Angeles Angels,78,84,162,78.0,733,737
+2013,Los Angeles Dodgers,92,70,162,92.0,649,582
+2013,Miami Marlins,62,100,162,62.0,513,646
+2013,Milwaukee Brewers,74,88,162,74.0,640,687
+2013,Minnesota Twins,66,96,162,66.0,614,788
+2013,New York Mets,74,88,162,74.0,619,684
+2013,New York Yankees,85,77,162,85.0,650,671
+2013,Oakland Athletics,96,66,162,96.0,767,625
+2013,Philadelphia Phillies,73,89,162,73.0,610,749
+2013,Pittsburgh Pirates,94,68,162,94.0,634,577
+2013,San Diego Padres,76,86,162,76.0,618,700
+2013,San Francisco Giants,76,86,162,76.0,629,691
+2013,Seattle Mariners,71,91,162,71.0,624,754
+2013,St. Louis Cardinals,97,65,162,97.0,783,596
+2013,Tampa Bay Rays,92,71,163,92.0,700,646
+2013,Texas Rangers,91,72,163,91.0,730,636
+2013,Toronto Blue Jays,74,88,162,74.0,712,756
+2013,Washington Nationals,86,76,162,86.0,656,626
+2014,Arizona Diamondbacks,64,98,162,64.0,615,742
+2014,Atlanta Braves,79,83,162,79.0,573,597
+2014,Baltimore Orioles,96,66,162,96.0,705,593
+2014,Boston Red Sox,71,91,162,71.0,634,715
+2014,Chicago Cubs,73,89,162,73.0,614,707
+2014,Chicago White Sox,73,89,162,73.0,660,758
+2014,Cincinnati Reds,76,86,162,76.0,595,612
+2014,Cleveland Guardians,85,77,162,85.0,669,653
+2014,Colorado Rockies,66,96,162,66.0,755,818
+2014,Detroit Tigers,90,72,162,90.0,757,705
+2014,Houston Astros,70,92,162,70.0,629,723
+2014,Kansas City Royals,89,73,162,89.0,651,624
+2014,Los Angeles Angels,98,64,162,98.0,773,630
+2014,Los Angeles Dodgers,94,68,162,94.0,718,617
+2014,Miami Marlins,77,85,162,77.0,645,674
+2014,Milwaukee Brewers,82,80,162,82.0,650,657
+2014,Minnesota Twins,70,92,162,70.0,715,777
+2014,New York Mets,79,83,162,79.0,629,618
+2014,New York Yankees,84,78,162,84.0,633,664
+2014,Oakland Athletics,88,74,162,88.0,729,572
+2014,Philadelphia Phillies,73,89,162,73.0,619,687
+2014,Pittsburgh Pirates,88,74,162,88.0,682,631
+2014,San Diego Padres,77,85,162,77.0,535,577
+2014,San Francisco Giants,88,74,162,88.0,665,614
+2014,Seattle Mariners,87,75,162,87.0,634,554
+2014,St. Louis Cardinals,90,72,162,90.0,619,603
+2014,Tampa Bay Rays,77,85,162,77.0,612,625
+2014,Texas Rangers,67,95,162,67.0,637,773
+2014,Toronto Blue Jays,83,79,162,83.0,723,686
+2014,Washington Nationals,96,66,162,96.0,686,555
+2015,Arizona Diamondbacks,79,83,162,79.0,720,713
+2015,Atlanta Braves,67,95,162,67.0,573,760
+2015,Baltimore Orioles,81,81,162,81.0,713,693
+2015,Boston Red Sox,78,84,162,78.0,748,753
+2015,Chicago Cubs,97,65,162,97.0,689,608
+2015,Chicago White Sox,76,86,162,76.0,622,701
+2015,Cincinnati Reds,64,98,162,64.0,640,754
+2015,Cleveland Guardians,81,80,161,81.0,669,640
+2015,Colorado Rockies,68,94,162,68.0,737,844
+2015,Detroit Tigers,74,87,161,74.0,689,803
+2015,Houston Astros,86,76,162,86.0,729,618
+2015,Kansas City Royals,95,67,162,95.0,724,641
+2015,Los Angeles Angels,85,77,162,85.0,661,675
+2015,Los Angeles Dodgers,92,70,162,92.0,667,595
+2015,Miami Marlins,71,91,162,71.0,613,678
+2015,Milwaukee Brewers,68,94,162,68.0,655,737
+2015,Minnesota Twins,83,79,162,83.0,696,700
+2015,New York Mets,90,72,162,90.0,683,613
+2015,New York Yankees,87,75,162,87.0,764,698
+2015,Oakland Athletics,68,94,162,68.0,694,729
+2015,Philadelphia Phillies,63,99,162,63.0,626,809
+2015,Pittsburgh Pirates,98,64,162,98.0,697,596
+2015,San Diego Padres,74,88,162,74.0,650,731
+2015,San Francisco Giants,84,78,162,84.0,696,627
+2015,Seattle Mariners,76,86,162,76.0,656,726
+2015,St. Louis Cardinals,100,62,162,100.0,647,525
+2015,Tampa Bay Rays,80,82,162,80.0,644,642
+2015,Texas Rangers,88,74,162,88.0,751,733
+2015,Toronto Blue Jays,93,69,162,93.0,891,670
+2015,Washington Nationals,83,79,162,83.0,703,635
+2016,Arizona Diamondbacks,69,93,162,69.0,752,890
+2016,Atlanta Braves,68,93,161,68.0,649,779
+2016,Baltimore Orioles,89,73,162,89.0,744,715
+2016,Boston Red Sox,93,69,162,93.0,878,694
+2016,Chicago Cubs,103,58,161,103.0,808,556
+2016,Chicago White Sox,78,84,162,78.0,686,715
+2016,Cincinnati Reds,68,94,162,68.0,716,854
+2016,Cleveland Guardians,94,67,161,94.0,777,676
+2016,Colorado Rockies,75,87,162,75.0,845,860
+2016,Detroit Tigers,86,75,161,86.0,750,721
+2016,Houston Astros,84,78,162,84.0,724,701
+2016,Kansas City Royals,81,81,162,81.0,675,712
+2016,Los Angeles Angels,74,88,162,74.0,717,727
+2016,Los Angeles Dodgers,91,71,162,91.0,725,638
+2016,Miami Marlins,79,82,161,79.0,655,682
+2016,Milwaukee Brewers,73,89,162,73.0,671,733
+2016,Minnesota Twins,59,103,162,59.0,722,889
+2016,New York Mets,87,75,162,87.0,671,617
+2016,New York Yankees,84,78,162,84.0,680,702
+2016,Oakland Athletics,69,93,162,69.0,653,761
+2016,Philadelphia Phillies,71,91,162,71.0,610,796
+2016,Pittsburgh Pirates,78,83,161,78.0,729,758
+2016,San Diego Padres,68,94,162,68.0,686,770
+2016,San Francisco Giants,87,75,162,87.0,715,631
+2016,Seattle Mariners,86,76,162,86.0,768,707
+2016,St. Louis Cardinals,86,76,162,86.0,779,712
+2016,Tampa Bay Rays,68,94,162,68.0,672,713
+2016,Texas Rangers,95,67,162,95.0,765,757
+2016,Toronto Blue Jays,89,73,162,89.0,759,666
+2016,Washington Nationals,95,67,162,95.0,763,612
+2017,Arizona Diamondbacks,93,69,162,93.0,812,659
+2017,Atlanta Braves,72,90,162,72.0,732,821
+2017,Baltimore Orioles,75,87,162,75.0,743,841
+2017,Boston Red Sox,93,69,162,93.0,785,668
+2017,Chicago Cubs,92,70,162,92.0,822,695
+2017,Chicago White Sox,67,95,162,67.0,706,820
+2017,Cincinnati Reds,68,94,162,68.0,753,869
+2017,Cleveland Guardians,102,60,162,102.0,818,564
+2017,Colorado Rockies,87,75,162,87.0,824,757
+2017,Detroit Tigers,64,98,162,64.0,735,894
+2017,Houston Astros,101,61,162,101.0,896,700
+2017,Kansas City Royals,80,82,162,80.0,702,791
+2017,Los Angeles Angels,80,82,162,80.0,710,709
+2017,Los Angeles Dodgers,104,58,162,104.0,770,580
+2017,Miami Marlins,77,85,162,77.0,778,822
+2017,Milwaukee Brewers,86,76,162,86.0,732,697
+2017,Minnesota Twins,85,77,162,85.0,815,788
+2017,New York Mets,70,92,162,70.0,735,863
+2017,New York Yankees,91,71,162,91.0,858,660
+2017,Oakland Athletics,75,87,162,75.0,739,826
+2017,Philadelphia Phillies,66,96,162,66.0,690,782
+2017,Pittsburgh Pirates,75,87,162,75.0,668,731
+2017,San Diego Padres,71,91,162,71.0,604,816
+2017,San Francisco Giants,64,98,162,64.0,639,776
+2017,Seattle Mariners,78,84,162,78.0,750,772
+2017,St. Louis Cardinals,83,79,162,83.0,761,705
+2017,Tampa Bay Rays,80,82,162,80.0,694,704
+2017,Texas Rangers,78,84,162,78.0,799,816
+2017,Toronto Blue Jays,76,86,162,76.0,693,784
+2017,Washington Nationals,97,65,162,97.0,819,672
+2018,Arizona Diamondbacks,82,80,162,82.0,693,644
+2018,Atlanta Braves,90,72,162,90.0,759,657
+2018,Baltimore Orioles,47,115,162,47.0,622,892
+2018,Boston Red Sox,108,54,162,108.0,876,647
+2018,Chicago Cubs,95,68,163,95.0,761,645
+2018,Chicago White Sox,62,100,162,62.0,656,848
+2018,Cincinnati Reds,67,95,162,67.0,696,819
+2018,Cleveland Guardians,91,71,162,91.0,818,648
+2018,Colorado Rockies,91,72,163,91.0,780,745
+2018,Detroit Tigers,64,98,162,64.0,630,796
+2018,Houston Astros,103,59,162,103.0,797,534
+2018,Kansas City Royals,58,104,162,58.0,638,833
+2018,Los Angeles Angels,80,82,162,80.0,721,722
+2018,Los Angeles Dodgers,92,71,163,92.0,804,610
+2018,Miami Marlins,63,98,161,63.0,589,809
+2018,Milwaukee Brewers,96,67,163,96.0,754,659
+2018,Minnesota Twins,78,84,162,78.0,738,775
+2018,New York Mets,77,85,162,77.0,676,707
+2018,New York Yankees,100,62,162,100.0,851,669
+2018,Oakland Athletics,97,65,162,97.0,813,674
+2018,Philadelphia Phillies,80,82,162,80.0,677,728
+2018,Pittsburgh Pirates,82,79,161,82.0,692,693
+2018,San Diego Padres,66,96,162,66.0,617,767
+2018,San Francisco Giants,73,89,162,73.0,603,699
+2018,Seattle Mariners,89,73,162,89.0,677,711
+2018,St. Louis Cardinals,88,74,162,88.0,759,691
+2018,Tampa Bay Rays,90,72,162,90.0,716,646
+2018,Texas Rangers,67,95,162,67.0,737,848
+2018,Toronto Blue Jays,73,89,162,73.0,709,832
+2018,Washington Nationals,82,80,162,82.0,771,682
+2019,Arizona Diamondbacks,85,77,162,85.0,813,743
+2019,Atlanta Braves,97,65,162,97.0,855,743
+2019,Baltimore Orioles,54,108,162,54.0,729,981
+2019,Boston Red Sox,84,78,162,84.0,901,828
+2019,Chicago Cubs,84,78,162,84.0,814,717
+2019,Chicago White Sox,72,89,161,72.0,708,832
+2019,Cincinnati Reds,75,87,162,75.0,701,711
+2019,Cleveland Guardians,93,69,162,93.0,769,657
+2019,Colorado Rockies,71,91,162,71.0,835,958
+2019,Detroit Tigers,47,114,161,47.0,582,915
+2019,Houston Astros,107,55,162,107.0,920,640
+2019,Kansas City Royals,59,103,162,59.0,691,869
+2019,Los Angeles Angels,72,90,162,72.0,769,868
+2019,Los Angeles Dodgers,106,56,162,106.0,886,613
+2019,Miami Marlins,57,105,162,57.0,615,808
+2019,Milwaukee Brewers,89,73,162,89.0,769,766
+2019,Minnesota Twins,101,61,162,101.0,939,754
+2019,New York Mets,86,76,162,86.0,791,737
+2019,New York Yankees,103,59,162,103.0,943,739
+2019,Oakland Athletics,97,65,162,97.0,845,680
+2019,Philadelphia Phillies,81,81,162,81.0,774,794
+2019,Pittsburgh Pirates,69,93,162,69.0,758,911
+2019,San Diego Padres,70,92,162,70.0,682,789
+2019,San Francisco Giants,77,85,162,77.0,678,773
+2019,Seattle Mariners,68,94,162,68.0,758,893
+2019,St. Louis Cardinals,91,71,162,91.0,764,662
+2019,Tampa Bay Rays,96,66,162,96.0,769,656
+2019,Texas Rangers,78,84,162,78.0,810,878
+2019,Toronto Blue Jays,67,95,162,67.0,726,828
+2019,Washington Nationals,93,69,162,93.0,873,724
+2020,Arizona Diamondbacks,25,35,60,67.5,269,295
+2020,Atlanta Braves,35,25,60,94.5,348,288
+2020,Baltimore Orioles,25,35,60,67.5,274,294
+2020,Boston Red Sox,24,36,60,64.8,292,351
+2020,Chicago Cubs,34,26,60,91.8,265,240
+2020,Chicago White Sox,35,25,60,94.5,306,246
+2020,Cincinnati Reds,31,29,60,83.7,243,243
+2020,Cleveland Guardians,35,25,60,94.5,248,209
+2020,Colorado Rockies,26,34,60,70.2,275,353
+2020,Detroit Tigers,23,35,58,62.1,249,318
+2020,Houston Astros,29,31,60,78.3,279,275
+2020,Kansas City Royals,26,34,60,70.2,248,272
+2020,Los Angeles Angels,26,34,60,70.2,294,321
+2020,Los Angeles Dodgers,43,17,60,116.1,349,213
+2020,Miami Marlins,31,29,60,83.7,263,304
+2020,Milwaukee Brewers,29,31,60,78.3,247,264
+2020,Minnesota Twins,36,24,60,97.2,269,215
+2020,New York Mets,26,34,60,70.2,286,308
+2020,New York Yankees,33,27,60,89.1,315,270
+2020,Oakland Athletics,36,24,60,97.2,274,232
+2020,Philadelphia Phillies,28,32,60,75.6,306,311
+2020,Pittsburgh Pirates,19,41,60,51.3,219,298
+2020,San Diego Padres,37,23,60,99.9,325,241
+2020,San Francisco Giants,29,31,60,78.3,299,297
+2020,Seattle Mariners,27,33,60,72.9,254,303
+2020,St. Louis Cardinals,30,28,58,81.0,240,229
+2020,Tampa Bay Rays,40,20,60,108.0,289,229
+2020,Texas Rangers,22,38,60,59.4,224,312
+2020,Toronto Blue Jays,32,28,60,86.4,302,312
+2020,Washington Nationals,26,34,60,70.2,293,301
+2021,Arizona Diamondbacks,52,110,162,52.0,679,893
+2021,Atlanta Braves,88,73,161,88.0,790,656
+2021,Baltimore Orioles,52,110,162,52.0,659,956
+2021,Boston Red Sox,92,70,162,92.0,829,749
+2021,Chicago Cubs,71,91,162,71.0,705,839
+2021,Chicago White Sox,93,69,162,93.0,796,636
+2021,Cincinnati Reds,83,79,162,83.0,786,760
+2021,Cleveland Guardians,80,82,162,80.0,717,727
+2021,Colorado Rockies,74,87,161,74.0,739,796
+2021,Detroit Tigers,77,85,162,77.0,697,756
+2021,Houston Astros,95,67,162,95.0,863,658
+2021,Kansas City Royals,74,88,162,74.0,686,788
+2021,Los Angeles Angels,77,85,162,77.0,723,804
+2021,Los Angeles Dodgers,106,56,162,106.0,830,561
+2021,Miami Marlins,67,95,162,67.0,623,701
+2021,Milwaukee Brewers,95,67,162,95.0,738,623
+2021,Minnesota Twins,73,89,162,73.0,729,834
+2021,New York Mets,77,85,162,77.0,636,668
+2021,New York Yankees,92,70,162,92.0,711,669
+2021,Oakland Athletics,86,76,162,86.0,743,687
+2021,Philadelphia Phillies,82,80,162,82.0,734,745
+2021,Pittsburgh Pirates,61,101,162,61.0,609,833
+2021,San Diego Padres,79,83,162,79.0,729,708
+2021,San Francisco Giants,107,55,162,107.0,804,594
+2021,Seattle Mariners,90,72,162,90.0,697,748
+2021,St. Louis Cardinals,90,72,162,90.0,706,672
+2021,Tampa Bay Rays,100,62,162,100.0,857,651
+2021,Texas Rangers,60,102,162,60.0,625,815
+2021,Toronto Blue Jays,91,71,162,91.0,846,663
+2021,Washington Nationals,65,97,162,65.0,724,820
+2022,Arizona Diamondbacks,74,88,162,74.0,702,740
+2022,Atlanta Braves,101,61,162,101.0,789,609
+2022,Baltimore Orioles,83,79,162,83.0,674,688
+2022,Boston Red Sox,78,84,162,78.0,735,787
+2022,Chicago Cubs,74,88,162,74.0,657,731
+2022,Chicago White Sox,81,81,162,81.0,686,717
+2022,Cincinnati Reds,62,100,162,62.0,648,815
+2022,Cleveland Guardians,92,70,162,92.0,698,634
+2022,Colorado Rockies,68,94,162,68.0,698,873
+2022,Detroit Tigers,66,96,162,66.0,557,713
+2022,Houston Astros,106,56,162,106.0,737,518
+2022,Kansas City Royals,65,97,162,65.0,640,810
+2022,Los Angeles Angels,73,89,162,73.0,623,668
+2022,Los Angeles Dodgers,111,51,162,111.0,847,513
+2022,Miami Marlins,69,93,162,69.0,586,676
+2022,Milwaukee Brewers,86,76,162,86.0,725,688
+2022,Minnesota Twins,78,84,162,78.0,696,684
+2022,New York Mets,101,61,162,101.0,772,606
+2022,New York Yankees,99,63,162,99.0,807,567
+2022,Oakland Athletics,60,102,162,60.0,568,770
+2022,Philadelphia Phillies,87,75,162,87.0,747,685
+2022,Pittsburgh Pirates,62,100,162,62.0,591,817
+2022,San Diego Padres,89,73,162,89.0,705,660
+2022,San Francisco Giants,81,81,162,81.0,716,697
+2022,Seattle Mariners,90,72,162,90.0,690,623
+2022,St. Louis Cardinals,93,69,162,93.0,772,637
+2022,Tampa Bay Rays,86,76,162,86.0,666,614
+2022,Texas Rangers,68,94,162,68.0,707,743
+2022,Toronto Blue Jays,92,70,162,92.0,775,679
+2022,Washington Nationals,55,107,162,55.0,603,855
+2023,Arizona Diamondbacks,84,78,162,84.0,746,761
+2023,Atlanta Braves,104,58,162,104.0,947,716
+2023,Baltimore Orioles,101,61,162,101.0,807,678
+2023,Boston Red Sox,78,84,162,78.0,772,776
+2023,Chicago Cubs,83,79,162,83.0,819,723
+2023,Chicago White Sox,61,101,162,61.0,641,841
+2023,Cincinnati Reds,82,80,162,82.0,783,821
+2023,Cleveland Guardians,76,86,162,76.0,662,697
+2023,Colorado Rockies,59,103,162,59.0,721,957
+2023,Detroit Tigers,78,84,162,78.0,661,740
+2023,Houston Astros,90,72,162,90.0,827,698
+2023,Kansas City Royals,56,106,162,56.0,676,859
+2023,Los Angeles Angels,73,89,162,73.0,739,829
+2023,Los Angeles Dodgers,100,62,162,100.0,906,699
+2023,Miami Marlins,84,78,162,84.0,666,723
+2023,Milwaukee Brewers,92,70,162,92.0,728,647
+2023,Minnesota Twins,87,75,162,87.0,778,659
+2023,New York Mets,75,87,162,75.0,717,729
+2023,New York Yankees,82,80,162,82.0,673,698
+2023,Oakland Athletics,50,112,162,50.0,585,924
+2023,Philadelphia Phillies,90,72,162,90.0,796,715
+2023,Pittsburgh Pirates,76,86,162,76.0,692,790
+2023,San Diego Padres,82,80,162,82.0,752,648
+2023,San Francisco Giants,79,83,162,79.0,674,719
+2023,Seattle Mariners,88,74,162,88.0,758,659
+2023,St. Louis Cardinals,71,91,162,71.0,719,829
+2023,Tampa Bay Rays,99,63,162,99.0,860,665
+2023,Texas Rangers,90,72,162,90.0,881,716
+2023,Toronto Blue Jays,89,73,162,89.0,746,671
+2023,Washington Nationals,71,91,162,71.0,700,845
+2024,Arizona Diamondbacks,89,73,162,89.0,886,788
+2024,Atlanta Braves,89,73,162,89.0,704,607
+2024,Baltimore Orioles,91,71,162,91.0,786,699
+2024,Boston Red Sox,81,81,162,81.0,751,747
+2024,Chicago Cubs,83,79,162,83.0,736,669
+2024,Chicago White Sox,41,121,162,41.0,507,813
+2024,Cincinnati Reds,77,85,162,77.0,699,694
+2024,Cleveland Guardians,92,69,161,92.0,708,621
+2024,Colorado Rockies,61,101,162,61.0,682,929
+2024,Detroit Tigers,86,76,162,86.0,682,642
+2024,Houston Astros,88,73,161,88.0,740,649
+2024,Kansas City Royals,86,76,162,86.0,735,644
+2024,Los Angeles Angels,63,99,162,63.0,635,797
+2024,Los Angeles Dodgers,98,64,162,98.0,842,686
+2024,Miami Marlins,62,100,162,62.0,637,841
+2024,Milwaukee Brewers,93,69,162,93.0,777,641
+2024,Minnesota Twins,82,80,162,82.0,742,735
+2024,New York Mets,89,73,162,89.0,768,697
+2024,New York Yankees,94,68,162,94.0,815,668
+2024,Oakland Athletics,69,93,162,69.0,643,764
+2024,Philadelphia Phillies,95,67,162,95.0,784,671
+2024,Pittsburgh Pirates,76,86,162,76.0,665,739
+2024,San Diego Padres,93,69,162,93.0,760,669
+2024,San Francisco Giants,80,82,162,80.0,693,699
+2024,Seattle Mariners,85,77,162,85.0,676,607
+2024,St. Louis Cardinals,83,79,162,83.0,672,719
+2024,Tampa Bay Rays,80,82,162,80.0,604,663
+2024,Texas Rangers,78,84,162,78.0,683,738
+2024,Toronto Blue Jays,74,88,162,74.0,671,743
+2024,Washington Nationals,71,91,162,71.0,660,764
+2025,Arizona Diamondbacks,80,82,162,80.0,791,785
+2025,Atlanta Braves,76,86,162,76.0,724,734
+2025,Baltimore Orioles,75,87,162,75.0,677,788
+2025,Boston Red Sox,89,73,162,89.0,786,676
+2025,Chicago Cubs,92,70,162,92.0,793,649
+2025,Chicago White Sox,60,102,162,60.0,647,742
+2025,Cincinnati Reds,83,79,162,83.0,716,681
+2025,Cleveland Guardians,88,74,162,88.0,643,649
+2025,Colorado Rockies,43,119,162,43.0,597,1021
+2025,Detroit Tigers,87,75,162,87.0,758,691
+2025,Houston Astros,87,75,162,87.0,686,665
+2025,Kansas City Royals,82,80,162,82.0,651,637
+2025,Los Angeles Angels,72,90,162,72.0,673,837
+2025,Los Angeles Dodgers,93,69,162,93.0,825,683
+2025,Miami Marlins,79,83,162,79.0,709,798
+2025,Milwaukee Brewers,97,65,162,97.0,806,634
+2025,Minnesota Twins,70,92,162,70.0,678,773
+2025,New York Mets,83,79,162,83.0,766,715
+2025,New York Yankees,94,68,162,94.0,849,685
+2025,Oakland Athletics,76,86,162,76.0,733,817
+2025,Philadelphia Phillies,96,66,162,96.0,778,648
+2025,Pittsburgh Pirates,71,91,162,71.0,583,645
+2025,San Diego Padres,90,72,162,90.0,702,621
+2025,San Francisco Giants,81,81,162,81.0,705,684
+2025,Seattle Mariners,90,72,162,90.0,766,694
+2025,St. Louis Cardinals,78,84,162,78.0,689,754
+2025,Tampa Bay Rays,77,85,162,77.0,714,683
+2025,Texas Rangers,81,81,162,81.0,684,605
+2025,Toronto Blue Jays,94,68,162,94.0,798,721
+2025,Washington Nationals,66,96,162,66.0,687,899

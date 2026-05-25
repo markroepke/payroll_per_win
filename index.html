@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Who Runs the Smartest Front Offices in Baseball?</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Saira+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous" />
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});"></script>
+
+<style>
+  :root {
+    --paper: #f4ede0;
+    --paper-2: #ece3d2;
+    --ink: #1a1612;
+    --ink-2: #3a342c;
+    --ink-3: #6b6357;
+    --rule: #d9cfba;
+    --rule-2: #c6b99e;
+    --accent: #8a2422;        /* baseball leather red */
+    --accent-deep: #5e1815;
+    --good: #355c3f;          /* skilled — muted green */
+    --good-bg: #e3e8d8;
+    --bad:  #8a2422;          /* unskilled — same accent */
+    --bad-bg: #ecdcd1;
+    --neutral-bg: #e8e0cf;
+
+    --serif: "Newsreader", "Iowan Old Style", "Hoefler Text", Georgia, serif;
+    --sans:  "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    --mono:  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --condensed: "Saira Condensed", "Oswald", "Arial Narrow", sans-serif;
+
+    --maxw: 1240px;
+    --textw: 680px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.55;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Subtle paper texture from cross-hatched gradient */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(60,40,20,0.05) 1px, transparent 0);
+    background-size: 3px 3px;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: multiply;
+  }
+
+  /* ===== Top bar — scorecard chrome ===== */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(244,237,224,0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1.5px solid var(--ink);
+  }
+  .topbar-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 12px 32px 0;
+  }
+  .topbar-row {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 24px;
+  }
+  .topbar-brand {
+    display: flex; align-items: center; gap: 14px;
+  }
+  .topbar-brand .mark {
+    width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .topbar-brand .wordmark {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .topbar-brand .title {
+    font-family: var(--condensed);
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .topbar-brand .title em {
+    color: var(--accent);
+    font-style: normal;
+  }
+  .topbar-brand .subtitle {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .topbar-meta {
+    display: flex; align-items: stretch;
+    border: 1px solid var(--ink);
+    flex-shrink: 0;
+  }
+  .topbar-meta > div {
+    padding: 6px 12px 7px;
+    border-right: 1px solid var(--ink);
+    display: flex; flex-direction: column; gap: 3px;
+    background: var(--paper);
+    min-width: 0;
+  }
+  .topbar-meta > div:last-child { border-right: 0; }
+  .topbar-meta .k {
+    font-family: var(--mono); font-size: 8.5px; font-weight: 700;
+    letter-spacing: 0.16em; color: var(--ink-3); text-transform: uppercase; line-height: 1;
+    white-space: nowrap;
+  }
+  .topbar-meta .v {
+    font-family: var(--condensed); font-weight: 700; font-size: 15px;
+    color: var(--ink); line-height: 1; font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .topbar-meta .v.accent { color: var(--accent); }
+
+  /* Inning strip below the brand row — looks like the box-score header */
+  .inning-strip {
+    display: grid;
+    grid-template-columns: 70px repeat(9, 1fr) 8px repeat(3, 1.05fr);
+    border-top: 1px solid var(--ink);
+    margin-top: 10px;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--ink-3);
+    letter-spacing: 0.08em;
+  }
+  .inning-strip > span {
+    text-align: center;
+    padding: 4px 0 5px;
+    border-right: 1px solid var(--rule);
+  }
+  .inning-strip > .label {
+    text-align: left; padding-left: 4px;
+    color: var(--ink); font-weight: 700;
+  }
+  .inning-strip > span:last-child { border-right: 0; }
+  .inning-strip > .sep { background: transparent; border-right: 0; padding: 0; }
+  .inning-strip .summary {
+    color: var(--paper); background: var(--ink); font-weight: 800;
+  }
+
+  /* ===== Layout ===== */
+  main { position: relative; z-index: 1; }
+
+  .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    padding: 90px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-kicker {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hero-kicker::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule-2);
+    max-width: 220px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 5.4vw, 78px);
+    line-height: 1.02;
+    letter-spacing: -0.022em;
+    margin: 0 0 24px;
+    max-width: 18ch;
+    text-wrap: balance;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent-deep); font-weight: 500; }
+  .hero-dek {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: 1.4;
+    color: var(--ink-2);
+    max-width: 32ch;
+    margin: 0 0 48px;
+  }
+  .byline {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-3);
+    display: flex; flex-wrap: wrap; gap: 28px;
+    border-top: 1px solid var(--rule);
+    padding-top: 22px;
+    max-width: 720px;
+  }
+  .byline div { display: flex; flex-direction: column; gap: 4px; }
+  .byline .lbl { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+  .byline .val { font-size: 14px; color: var(--ink); font-weight: 500; font-family: var(--serif); }
+
+  /* ===== Two-column reading layout ===== */
+  .reader {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 64px;
+    padding: 64px 0 80px;
+    align-items: start;
+  }
+  .toc {
+    position: sticky;
+    top: 80px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .toc-title {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .toc ol { list-style: none; padding: 0; margin: 0; counter-reset: t; }
+  .toc li { counter-increment: t; margin-bottom: 9px; }
+  .toc a {
+    color: var(--ink-2);
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    padding: 4px 0;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+    margin-left: -12px;
+    transition: all .15s ease;
+  }
+  .toc a::before {
+    content: "0" counter(t);
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-3);
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .toc a:hover, .toc a.active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+  .toc a:hover::before, .toc a.active::before { color: var(--accent); }
+
+  .article { max-width: var(--textw); }
+
+  /* ===== Article typography ===== */
+  .article h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(32px, 3.4vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 96px 0 6px;
+    text-wrap: balance;
+  }
+  .article h2:first-child { margin-top: 0; }
+  .section-num {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .article h2 + p { margin-top: 28px; }
+
+  .article h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin: 56px 0 18px;
+    text-wrap: balance;
+  }
+  .article h4 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 40px 0 14px;
+  }
+  .article p { margin: 0 0 22px; }
+  .article p strong { font-weight: 600; color: var(--ink); }
+  .article a { color: var(--accent); text-decoration: underline; text-decoration-color: var(--rule-2); text-underline-offset: 3px; }
+  .article a:hover { text-decoration-color: var(--accent); }
+
+  /* drop cap on first paragraph after first h2 */
+  .article > section:first-of-type p.lede::first-letter {
+    font-family: var(--serif);
+    font-weight: 500;
+    float: left;
+    font-size: 78px;
+    line-height: 0.86;
+    padding: 8px 12px 0 0;
+    color: var(--accent-deep);
+  }
+
+  .article ul, .article ol {
+    margin: 0 0 24px;
+    padding-left: 22px;
+  }
+  .article li { margin-bottom: 10px; }
+  .article li::marker { color: var(--ink-3); }
+
+  /* Inline KaTeX display */
+  .katex-display {
+    margin: 32px 0 !important;
+    padding: 20px 24px;
+    background: var(--paper-2);
+    border-left: 3px solid var(--rule-2);
+    border-radius: 2px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .katex { font-size: 1.02em !important; }
+
+  /* ===== Figures / charts (break-out width) ===== */
+  figure.chart {
+    margin: 56px 0;
+    width: calc(100% + 280px);
+    margin-left: -140px;
+  }
+  figure.chart.narrow { width: 100%; margin-left: 0; }
+  figure.chart .chart-svg {
+    width: 100%;
+    display: block;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    border-radius: 0;
+    padding: 0;
+    box-shadow: 0 1px 0 var(--rule), 6px 6px 0 -1px var(--ink);
+  }
+  figure.chart .chart-svg svg { display: block; width: 100%; height: auto; }
+  figure.chart .chart-svg.loading {
+    aspect-ratio: 1240 / 720;
+    background:
+      repeating-linear-gradient(45deg, transparent 0 12px, rgba(26,22,18,0.04) 12px 13px),
+      var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  figure.chart figcaption {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-3);
+    line-height: 1.45;
+    margin-top: 14px;
+    padding-left: 16px;
+    border-left: 2px solid var(--rule-2);
+    max-width: 720px;
+  }
+  figure.chart figcaption strong { color: var(--ink); font-weight: 600; }
+
+  /* ===== Pull quote ===== */
+  .pullquote {
+    margin: 56px -40px;
+    padding: 0 40px;
+    border-left: 3px solid var(--accent);
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.35;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .pullquote cite {
+    display: block;
+    font-style: normal;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 16px;
+  }
+
+  /* ===== Tables ===== */
+  .article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0 32px;
+    font-size: 15px;
+    font-family: var(--sans);
+  }
+  .article table caption {
+    text-align: left;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .article th, .article td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .article th {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-bottom: 1.5px solid var(--ink);
+    padding-bottom: 8px;
+  }
+  .article td.num, .article th.num {
+    text-align: right;
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 14px;
+  }
+  .article td.diff-pos { color: var(--good); font-weight: 600; }
+  .article td.diff-neg { color: var(--bad); font-weight: 600; }
+
+  /* ===== Callout boxes ===== */
+  .callout {
+    margin: 48px 0;
+    padding: 28px 32px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule-2);
+    border-radius: 2px;
+    position: relative;
+  }
+  .callout-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .callout-label::before {
+    content: ""; display: inline-block; width: 18px; height: 1px; background: var(--accent);
+  }
+  .callout h4 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink);
+    margin: 0 0 14px;
+  }
+  .callout p { margin-bottom: 14px; font-size: 17px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout .katex-display { background: transparent; border-left-color: var(--accent); padding-left: 18px; }
+
+  /* ===== Stat row / inline KPIs ===== */
+  .keystats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 48px 0 56px;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 24px 0;
+  }
+  .keystats div {
+    padding: 0 18px;
+    border-right: 1px solid var(--rule);
+  }
+  .keystats div:last-child { border-right: 0; }
+  .keystats .num {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .keystats .num.accent { color: var(--accent); }
+  .keystats .lbl {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 1.3;
+  }
+
+  /* ===== Tier rankings ===== */
+  .tier {
+    margin: 32px 0 48px;
+  }
+  .tier-head {
+    display: flex; align-items: baseline; gap: 14px;
+    border-bottom: 1.5px solid var(--ink);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+  .tier-pill {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+  .tier-pill.good { background: var(--good); color: var(--paper); }
+  .tier-pill.bad  { background: var(--bad); color: var(--paper); }
+  .tier-pill.mid  { background: var(--ink-3); color: var(--paper); }
+  .tier-head h4 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+    margin: 0;
+  }
+  .tier-rows { margin-top: 0; }
+  .tier-row {
+    display: grid;
+    grid-template-columns: 36px 1fr 100px 140px;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 15px;
+  }
+  .tier-row .rk {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    font-weight: 500;
+  }
+  .tier-row .team {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ink);
+  }
+  .tier-row .wae {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+  }
+  .tier.good .wae { color: var(--good); }
+  .tier.bad  .wae { color: var(--bad); }
+  .tier-row .ci {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ===== Spotlight cards ===== */
+  .spotlight {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .spotlight:last-of-type { border-bottom: 1px solid var(--rule); }
+  .spotlight-stats { font-family: var(--sans); }
+  .spotlight-team {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 18px;
+    text-wrap: balance;
+  }
+  .spotlight-stats .stat {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px dotted var(--rule-2);
+    gap: 8px;
+  }
+  .spotlight-stats .stat:last-child { border-bottom: none; }
+  .spotlight-stats .stat-lbl {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+  .spotlight-stats .stat-val {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .spotlight-stats .stat-val.pos { color: var(--good); }
+  .spotlight-stats .stat-val.neg { color: var(--bad); }
+  .spotlight-body p { margin-bottom: 0; }
+  .spotlight-body p + p { margin-top: 14px; }
+  .spotlight-tag {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+  .spotlight-tag.good { background: var(--good-bg); color: var(--good); }
+  .spotlight-tag.bad  { background: var(--bad-bg); color: var(--bad); }
+
+  /* ===== TL;DR list ===== */
+  .tldr {
+    background: var(--paper-2);
+    padding: 40px 44px;
+    margin: 48px 0 80px;
+    border-radius: 2px;
+    border: 1px solid var(--rule-2);
+  }
+  .tldr h3 { margin-top: 0; }
+  .tldr ul { list-style: none; padding: 0; margin: 24px 0 0; }
+  .tldr li {
+    padding: 16px 0 16px 32px;
+    border-top: 1px solid var(--rule-2);
+    position: relative;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .tldr li:last-child { padding-bottom: 0; }
+  .tldr li::before {
+    content: "→";
+    position: absolute;
+    left: 0; top: 16px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    border-top: 1.5px solid var(--ink);
+    padding: 56px 0 80px;
+    margin-top: 60px;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-3);
+    line-height: 1.55;
+    background:
+      linear-gradient(to right,
+        transparent 0, transparent 12px,
+        var(--accent) 12px, var(--accent) 18px,
+        transparent 18px, transparent 26px) 0 0 / 26px 1.5px repeat-x,
+      var(--paper);
+  }
+  footer .container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .footer-mark { display: flex; align-items: center; gap: 14px; }
+  .footer-mark-words { display: flex; flex-direction: column; gap: 4px; }
+  .footer-title {
+    font-family: var(--condensed);
+    font-weight: 800;
+    font-size: 19px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .footer-title em { color: var(--accent); font-style: normal; }
+  .footer-sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .footer-body p {
+    max-width: 760px;
+    font-style: italic;
+    font-family: var(--serif);
+    font-size: 15px;
+    margin: 0 0 28px;
+    color: var(--ink-2);
+  }
+  .signature-line {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--ink);
+    max-width: 760px;
+  }
+  .sig-cell {
+    padding: 8px 12px 10px;
+    border-right: 1px solid var(--ink);
+    display: flex; flex-direction: column; gap: 4px;
+    background: var(--paper);
+  }
+  .sig-cell:last-child { border-right: 0; }
+  .sig-cell .k {
+    font-family: var(--mono); font-size: 9px; font-weight: 700;
+    letter-spacing: 0.18em; color: var(--ink-3); text-transform: uppercase;
+  }
+  .sig-cell .v {
+    font-family: var(--serif); font-weight: 500; font-size: 13px; color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1100px) {
+    figure.chart { width: 100%; margin-left: 0; }
+    .pullquote { margin: 56px 0; }
+  }
+  @media (max-width: 860px) {
+    .reader { grid-template-columns: 1fr; gap: 0; }
+    .toc { display: none; }
+    .spotlight { grid-template-columns: 1fr; gap: 18px; }
+    .keystats { grid-template-columns: repeat(2, 1fr); gap: 16px 0; }
+    .keystats div { padding: 8px 16px; }
+    .keystats div:nth-child(2) { border-right: 0; }
+    .tier-row { grid-template-columns: 28px 1fr auto; }
+    .tier-row .ci { display: none; }
+    footer .container { grid-template-columns: 1fr; gap: 24px; }
+    .hero { padding: 56px 0 40px; }
+    .container { padding: 0 22px; }
+    .topbar-inner { padding: 10px 22px 0; }
+    .topbar-meta { display: none; }
+    .inning-strip { font-size: 8.5px; grid-template-columns: 60px repeat(9, 1fr) 6px repeat(3, 1fr); }
+    .topbar-brand .title { font-size: 17px; }
+  }
+
+  /* misc */
+  ::selection { background: var(--accent); color: var(--paper); }
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-row">
+      <div class="topbar-brand">
+        <div class="mark" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30">
+            <!-- baseball-diamond logomark -->
+            <polygon points="15,3 27,15 15,27 3,15" fill="none" stroke="#1a1612" stroke-width="1.6"/>
+            <line x1="15" y1="27" x2="15" y2="15" stroke="#1a1612" stroke-width="1"/>
+            <line x1="15" y1="15" x2="27" y2="15" stroke="#1a1612" stroke-width="1"/>
+            <circle cx="15" cy="15" r="2.2" fill="#8a2422"/>
+            <rect x="13" y="25" width="4" height="4" fill="#f4ede0" stroke="#1a1612" stroke-width="1" transform="rotate(45 15 27)"/>
+          </svg>
+        </div>
+        <div class="wordmark">
+          <div class="title">Front&nbsp;Office <em>Scorecard</em></div>
+          <div class="subtitle">Major League Baseball · 2000—2025</div>
+        </div>
+      </div>
+      <div class="topbar-meta">
+        <div><span class="k">Seasons</span><span class="v">26</span></div>
+        <div><span class="k">Clubs</span><span class="v">30</span></div>
+        <div><span class="k">Team·Yrs</span><span class="v">780</span></div>
+        <div><span class="k">Method</span><span class="v" style="font-size:12px;letter-spacing:0.04em">OLS</span></div>
+      </div>
+    </div>
+    <div class="inning-strip" aria-hidden="true">
+      <span class="label">INNING →</span>
+      <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+      <span class="sep"></span>
+      <span class="summary">R</span><span class="summary">H</span><span class="summary">E</span>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-kicker">A Sabermetric Investigation</div>
+    <h1>Who runs the <em>smartest</em> front offices in baseball?</h1>
+    <p class="hero-dek">Ranking MLB payroll skill across twenty-six seasons of contracts, Pythagorean wins, and the residuals in between.</p>
+    <div class="byline">
+      <div><span class="lbl">Window</span><span class="val">2000 — 2025</span></div>
+      <div><span class="lbl">Teams</span><span class="val">All 30 franchises</span></div>
+      <div><span class="lbl">Method</span><span class="val">Per-season OLS on log-payroll</span></div>
+      <div><span class="lbl">Response</span><span class="val">Pythagenpat wins</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== READER ===================== -->
+<div class="container">
+  <div class="reader">
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#s1">The Question</a></li>
+        <li><a href="#s2">Background</a></li>
+        <li><a href="#s3">What We Measured</a></li>
+        <li><a href="#s4">Best &amp; Worst</a></li>
+        <li><a href="#s5">Spotlights</a></li>
+        <li><a href="#s6">Caveats</a></li>
+        <li><a href="#s7">TL;DR</a></li>
+      </ol>
+    </nav>
+
+    <article class="article">
+
+      <!-- ============== SECTION 1 ============== -->
+      <section id="s1">
+        <h2><span class="section-num">§ 01</span>The Question</h2>
+        <p class="lede">The New York Yankees have made the playoffs in 21 of 26 seasons since 2000 and won exactly one World Series. The Tampa Bay Rays have spent most of the same window with the league's lowest payroll and built two pennant winners. The Oakland Athletics turned "Moneyball" into a sustained operating philosophy that posts the best payroll-to-wins record of any organization this century. The Los Angeles Dodgers have spent like the Yankees and won three of the last six World Series.</p>
+
+        <p>Which of these franchises has the smartest front office? That's the question this report answers.</p>
+
+        <p>We measure front-office skill by how many wins each franchise produced above what its payroll predicted, year after year, for 26 seasons.</p>
+
+        <p>We're not asking who's smartest at developing pitchers or who scouts internationally best or who got lucky with a Hall of Fame draft pick. We're asking — given the dollars they spent — which franchises consistently won more games than the league's spending economics said they should.</p>
+
+        <div class="keystats">
+          <div><div class="num">780</div><div class="lbl">Team-Seasons<br/>Analyzed</div></div>
+          <div><div class="num">26</div><div class="lbl">Years in<br/>the Window</div></div>
+          <div><div class="num accent">15<span style="font-size:24px">%</span></div><div class="lbl">Variance Explained<br/>by Payroll</div></div>
+          <div><div class="num">25<span style="font-size:22px">/26</span></div><div class="lbl">World Series Won by<br/>Top-3 Payroll Quintiles</div></div>
+        </div>
+      </section>
+
+      <!-- ============== SECTION 2 ============== -->
+      <section id="s2">
+        <h2><span class="section-num">§ 02</span>Background</h2>
+
+        <p>Before measuring anything, three pieces of context shape how to think about MLB front offices: <strong>wins are noisier than they look</strong>, <strong>the payroll–wins relationship is loose and concave</strong>, and <strong>money buys some specific things and not others</strong>.</p>
+
+        <h3>Wins Are Noisier Than They Look</h3>
+
+        <p>A baseball season is 162 games, but most teams' actual win total contains 5–10 wins of pure noise — close-game variance, walk-off luck, sequencing of hits, and the bullpen having a bad week in August.</p>
+
+        <p>That estimate isn't a guess. Sabermetric research dating back to Bill James's earliest <em>Baseball Abstracts</em> has documented a striking pattern: <strong>a team's record in one-run games — typically 40–50 per season, about a quarter of the schedule — has almost no year-over-year correlation.</strong> A team that goes 30–15 in one-run games one year is roughly as likely to go 22–23 the next as to keep winning at that clip. The familiar "good teams win close games" narrative is mostly survivor bias; close-game performance is closer to a coin flip than a repeatable skill, and it's the largest single source of mismatch between a team's record and its actual underlying play.</p>
+
+        <p>Two other well-documented sources stack on top:</p>
+
+        <ul>
+          <li><strong>Bullpen sequencing.</strong> A reliever in a 5-run game contributes a fraction of a win; the same reliever in a one-run game can decide it. Bullpen performance specifically in high-leverage spots is itself volatile year over year — a great reliever has the same ERA whether their team wins or loses the close ones, but the bullpen-W/L line moves dramatically based on luck of inning context.</li>
+          <li><strong>Hit clustering.</strong> The same number of hits in an inning produces wildly different run totals depending on whether they bunch up or spread out. Some teams string together a five-run inning out of three singles and a double; others get the exact same hits across nine innings and score one run. The "cluster luck" community at FanGraphs and Baseball Prospectus has shown this typically contributes another 2–4 wins of noise per season.</li>
+        </ul>
+
+        <p>Add it all up and the standard deviation of a team's actual wins from its underlying run-differential performance lands around 4 wins per season, with roughly one team a year deviating by 10+ wins in either direction. Those outlier teams are the ones that get articles written about them — and they're the reason a wins-only ranking would mistake luck for skill.</p>
+
+        <h3>Pythagorean Wins</h3>
+
+        <p>The standard sabermetric correction is <strong>Pythagorean wins</strong>, a formula Bill James introduced in his <em>Baseball Abstract</em> series in the early 1980s. The name comes from the shape of the original equation — the squares looked like the Pythagorean theorem — but the idea is simple: a team's "true" winning percentage is determined by how many runs they score versus give up, not by how those runs are sequenced.</p>
+
+        <p>The original James formula uses a fixed exponent of 2:</p>
+
+        $$W\% = \frac{RS^{2}}{RS^{2} + RA^{2}}$$
+
+        <p>where \(W\%\) is the expected win percentage, \(RS\) is runs scored, and \(RA\) is runs allowed.</p>
+
+        <p>The variant we use throughout this report is <strong>pythagenpat</strong>, developed by David Smyth in the early 2000s. It is now the standard at FanGraphs and Baseball-Reference, and it's used for most modern sabermetric work. Instead of a fixed exponent, pythagenpat lets the exponent vary with run environment:</p>
+
+        $$W\% = \frac{RS^{x}}{RS^{x} + RA^{x}}, \qquad x = \left(\frac{RS + RA}{G}\right)^{\!0.287}$$
+
+        <p>where \(x\) is the run-environment-adjusted exponent and \(G\) is games played.</p>
+
+        <p>This allows the exponent to adapt to eras of baseball with different run-scoring norms, making the formula more accurate at extreme run environments — a necessary adaptation given the early-2000s steroid-era offense and post-2020 high-strikeout pitching eras.</p>
+
+        <h3>Actual Wins vs. Pythagorean Wins</h3>
+
+        <p>How big is the typical gap between actual wins and Pythagorean wins? In any given season, <strong>most teams finish within 2–4 wins of their Pythagorean prediction</strong>. Deviations of 6+ wins are unusual; deviations of 10+ are historic events worth talking about.</p>
+
+        <p>A few well-known historic deviations from the past 15 years:</p>
+
+        <table>
+          <caption>Notable Pythagorean Outliers, 2010–2024</caption>
+          <thead>
+            <tr>
+              <th>Team-Season</th>
+              <th class="num">Actual W</th>
+              <th class="num">Pyth W</th>
+              <th class="num">Diff</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2012 Baltimore Orioles</td><td class="num">93</td><td class="num">82</td><td class="num diff-pos">+11</td></tr>
+            <tr><td>2016 Texas Rangers</td><td class="num">95</td><td class="num">82</td><td class="num diff-pos">+13</td></tr>
+            <tr><td>2023 San Diego Padres</td><td class="num">82</td><td class="num">92</td><td class="num diff-neg">−10</td></tr>
+            <tr><td>2024 Chicago White Sox</td><td class="num">41</td><td class="num">48</td><td class="num diff-neg">−7</td></tr>
+          </tbody>
+        </table>
+
+        <p>When we measure front-office skill, we don't want a GM getting credit (or blame) for the luck and uncontrollable events that lead to these deviations. <strong>Pythagorean wins are the response variable throughout this report</strong>, because they are a better representation of what a front office can control.</p>
+
+        <h3>Relationship Between Payroll and Wins</h3>
+
+        <p>The relationship between payroll and Pythagorean wins is central to this analysis. For now, three things are important to understand:</p>
+
+        <ol>
+          <li>There are diminishing returns to each dollar spent on payroll.</li>
+          <li>Payroll does not explain a high percentage of the variance in wins.</li>
+          <li>Money gives front offices opportunities to compete.</li>
+        </ol>
+
+        <p>The chart below plots all 780 team-seasons in our window:</p>
+
+        <figure class="chart">
+          <div class="chart-svg loading" data-chart="scatter">Loading…</div>
+          <figcaption><strong>Fig. 1 — Payroll vs. Pythagorean wins, 2000–2025.</strong> Each dot is a team-season. The concave fit captures diminishing returns; the noise around it is where front-office skill lives.</figcaption>
+        </figure>
+
+        <p>A fair worry about Fig. 1 is that pooling 26 seasons together could be hiding the real shape — nominal payrolls inflated roughly fivefold while wins stayed bounded, which can flatten any across-year cloud regardless of the within-year truth. To check, we re-fit the same log model independently for each season:</p>
+
+        <figure class="chart">
+          <div class="chart-svg loading" data-chart="seasonfits">Loading…</div>
+          <figcaption><strong>Fig. 1b — Per-season fits, 2000–2025.</strong> Each thin curve is one season's independent log fit, clipped to that year's observed payroll range. The thick red curve is the pooled fit from Fig. 1.</figcaption>
+        </figure>
+
+        <p>The concave shape holds in every individual season — all 26 slopes are positive, with no year showing a linear or inverted relationship. If anything, the per-season slopes (median ≈ 10.5) are <em>steeper</em> than the pooled slope (7.29), which means the across-year pooling slightly understates how strongly payroll predicts wins within any given market. The diminishing-returns story isn't a pooling artifact: it's a property of each year's market for talent.</p>
+
+        <p>With that robustness check behind us, two takeaways from the shape itself:</p>
+
+        <ul>
+          <li><strong>Diminishing returns are real.</strong> Going from <strong>$50M to $100M</strong> in payroll predicts about <strong>+5 Pythagorean wins</strong> at the league average. From $100M to $200M, another <strong>+5</strong>. From $200M to $300M, only about <strong>+3</strong> more. Each doubling of payroll buys roughly the same number of additional wins — the marginal dollar buys less the more you've already spent.</li>
+          <li><strong>The fit is loose.</strong> The average within-season R² is <strong>0.154</strong> — payroll explains only about 15% of the variance in Pythagorean wins. Eighty-five percent of what separates a 75-win team from a 95-win team is something other than money. That's where front-office skill lives.</li>
+        </ul>
+
+        <h3>What Money Buys</h3>
+
+        <p>When looking at whether money can buy success, it is important to define success. We assume three definitions:</p>
+
+        <ol>
+          <li><strong>Wins:</strong> teams try to win games by scoring more runs than their opponents, summarized by Pythagorean wins.</li>
+          <li><strong>Playoff appearances:</strong> there is material benefit to making the playoffs, including a chance for a title and additional revenue.</li>
+          <li><strong>Titles:</strong> the ultimate competitive goal of the sport.</li>
+        </ol>
+
+        <p>To examine how payroll correlates with the three above definitions of success, teams were organized into quintiles for each season based on their payroll.</p>
+
+        <figure class="chart">
+          <div class="chart-svg loading" data-chart="money">Loading…</div>
+          <figcaption><strong>Fig. 2 — What money can (and can't) buy.</strong> Team-seasons grouped into payroll quintiles, charted against wins, playoff appearances, and titles.</figcaption>
+        </figure>
+
+        <p>Based on the chart above, we can make a few conclusions:</p>
+
+        <ol>
+          <li><strong>Money can buy regular-season wins — but money isn't the only factor.</strong> Top-quintile team-seasons average <strong>88.1 wins</strong>; bottom-quintile average <strong>76.3</strong>. That's a 12-win gap; but these are averages. There is variation within each quintile.</li>
+          <li><strong>Money can buy playoff appearances — but cheap teams can still get there.</strong> Top-quintile teams reach the playoffs in <strong>53%</strong> of their team-seasons; the bottom quintile manages <strong>20%</strong>. The Rays, A's, and Guardians have spent most of the century in the bottom third of payrolls and combined for 30 playoff appearances anyway. Money is a tailwind for getting to October, not a gate.</li>
+          <li><strong>Money is the entry fee for a title.</strong> Of the 26 World Series winners in our window, <strong>25 came from the top three quintiles</strong>. Only one team from the bottom 40% of payrolls — the 2003 Marlins, who promptly held the league's most famous fire sale — has won a ring since 2000. Bottom-40% teams have made 65 playoff appearances and won 1 World Series; top-60% teams have made 184 playoff appearances and won 25. Per appearance, that's 1.5% vs. 13.6% — payroll quintile changes the title conversion rate by a factor of <strong>nine</strong>.</li>
+        </ol>
+
+        <blockquote class="pullquote">
+          A skilled front office can build a contender at any payroll. It cannot reliably build a champion at any payroll.
+          <cite>The Structural Ceiling</cite>
+        </blockquote>
+
+        <p>The implication for what follows: a skilled front office can build a <em>contender</em> at any payroll (the Rays prove it). It cannot reliably build a <em>champion</em> at any payroll. The structural ceiling is real, and even the best front offices operate inside it. Front offices should not be penalized for their ownership not providing the funds necessary to compete for a title.</p>
+      </section>
+
+      <!-- ============== SECTION 3 ============== -->
+      <section id="s3">
+        <h2><span class="section-num">§ 03</span>What We Measured</h2>
+
+        <h3>The Methodology</h3>
+
+        <p>The analysis starts by defining a skill metric on which to measure front-office ability. Our basic definition of front-office skill: <strong>how a team performs relative to how its payroll predicted it would perform.</strong></p>
+
+        <h4>Expected Wins from Payroll</h4>
+
+        <p>First, we need to predict how many games a team should win based on its payroll. For each season \(t\), we fit the following OLS regression across that year's 30 teams:</p>
+
+        $$\widehat{W}^{\,\text{pyth}}_{\,162,\,i,t} = \alpha_{t} + \beta_{t} \cdot \ln\!\bigl(P_{i,t}\bigr)$$
+
+        <p>where:</p>
+        <ul>
+          <li>\(\widehat{W}^{\,\text{pyth}}_{\,162,\,i,t}\) is team \(i\)'s expected number of wins in season \(t\) on a 162-game basis, using the pythagenpat methodology above</li>
+          <li>\(\alpha_{t}\) is the season-\(t\) intercept</li>
+          <li>\(\beta_{t}\) is the season-\(t\) slope coefficient on log-payroll</li>
+          <li>\(P_{i,t}\) is team \(i\)'s Opening Day payroll in season \(t\), in millions of dollars</li>
+        </ul>
+
+        <p>Pythagorean wins as the response strips out the close-game luck described in Section 2. Log-transformed payroll captures the diminishing-returns concavity from the league-shape chart — fitting a straight line through that concave curve would systematically over-credit low-payroll teams and under-credit big spenders.</p>
+
+        <p>Fitting one regression per year, rather than a single regression across the whole period, controls for inflation (both actual $ inflation and league payroll inflation) automatically: each season's slope is calibrated to that season's MLB payroll dollars.</p>
+
+        <p>We can use these resulting models to estimate how many games each team should have won in a given year given its payroll. Moving forward, we will refer to this as <em>predicted wins</em>.</p>
+
+        <h4>Win Residuals</h4>
+
+        <p>With predicted wins estimates computed and actual Pythagorean wins (based on actual runs scored and runs allowed), we can calculate the residuals for each team-season. This is how many more or fewer wins a team achieved than they were expected to based on their payroll. We call it <strong>Wins Above Expected</strong> (WAE):</p>
+
+        $$\text{WAE}_{i,t} = W^{\,\text{pyth}}_{\,162,\,i,t} - \widehat{W}^{\,\text{pyth}}_{\,162,\,i,t}$$
+
+        <h4>Franchise Skill Metric</h4>
+
+        <p>Averaging those residuals for franchise \(i\) across all \(T = 26\) seasons gives the <strong>mean Pythagorean wins above payroll-expected</strong> for that franchise:</p>
+
+        $$\overline{\text{WAE}}_{i} = \frac{1}{T} \sum_{t=1}^{T} \text{WAE}_{i,t}$$
+
+        <p>This is the front-office skill metric we will use moving forward.</p>
+
+        <h3>The Data</h3>
+
+        <p>For every team-season from 2000 through 2025 we paired two inputs — payroll and on-field performance — and applied a few normalizations so the numbers from 2002 are comparable to the numbers from 2025.</p>
+
+        <ul>
+          <li><strong>Payroll: Opening Day, active 26-man roster commitments, nominal USD.</strong> Compiled from a combination of <a href="https://www.spotrac.com/mlb/payroll/">Spotrac</a>, USA Today's MLB salaries database, and <a href="https://www.thebaseballcube.com/">The Baseball Cube</a>. For the 2020 COVID-shortened season we use <em>pre-pandemic</em> Opening Day commitments rather than the prorated cash that was actually paid, so 2020 stays on the same scale as the other 25 seasons.</li>
+          <li><strong>Wins, runs scored, and runs allowed.</strong> Pulled from the MLB Stats API, the league's own JSON endpoint for standings. 2020 actual wins are prorated to a 162-game pace; Pythagorean winning percentages are computed from the actual 60-game runs-scored and runs-allowed, then projected to 162.</li>
+          <li><strong>Franchise renames and relocations</strong> (Montreal Expos → Washington Nationals, Tampa Bay Devil Rays → Tampa Bay Rays, Florida Marlins → Miami Marlins, Anaheim Angels → Los Angeles Angels, Cleveland Indians → Cleveland Guardians) are collapsed to a single canonical name per franchise so we can track each one's whole 26-year arc.</li>
+        </ul>
+
+        <p>Total dataset: 780 team-seasons (30 teams × 26 years). All of the joining, regression, and chart code that produced this report lives in the same repository as the report itself.</p>
+      </section>
+
+      <!-- ============== SECTION 4 ============== -->
+      <section id="s4">
+        <h2><span class="section-num">§ 04</span>The Best (and Worst) Front Offices</h2>
+
+        <p>Here are all 30 franchises sorted by front-office skill, 2000–2025. The black bars are 95% confidence intervals on each franchise's mean.</p>
+
+        <figure class="chart">
+          <div class="chart-svg loading" data-chart="skill">Loading…</div>
+          <figcaption><strong>Fig. 3 — Franchise skill ranking, 2000–2025.</strong> Mean WAE with 95% CIs. Green = clearly skilled, red = clearly unskilled, gray = league-average within the noise.</figcaption>
+        </figure>
+
+        <div class="callout">
+          <div class="callout-label">Methodology Note</div>
+          <h4>How the confidence intervals were computed</h4>
+          <p>For each franchise \(i\) we have \(n = 26\) annual WAE residuals (one per season, 2000–2025). Let \(\overline{\text{WAE}}_{i}\) be the franchise's mean residual and \(s_{i}\) the sample standard deviation of those 26 residuals. The standard error of the mean is</p>
+          $$\text{SE}\!\left(\overline{\text{WAE}}_{i}\right) = \frac{s_{i}}{\sqrt{n}} = \frac{s_{i}}{\sqrt{26}}$$
+          <p>which typically lands between 1.5 and 2.5 wins per franchise, depending on how variable their year-to-year residuals are. The 95% confidence interval is</p>
+          $$\overline{\text{WAE}}_{i} \pm 1.96 \cdot \text{SE}\!\left(\overline{\text{WAE}}_{i}\right)$$
+          <p>the range we'd expect to contain the franchise's "true" long-run skill if we could keep running 26-year windows. This treats each year's residual as an independent sample of the franchise's skill, which is a reasonable assumption here because the per-season regression is fit independently each year (so residuals don't share fitting noise across seasons).</p>
+        </div>
+
+        <p>The chart tells the story in three tiers, and the tiers come from the data, not our judgment:</p>
+
+        <ul>
+          <li><strong style="color:var(--good)">Green bars (7 teams)</strong> have 95% confidence intervals entirely above zero. These are the front offices whose skill premium is statistically clear.</li>
+          <li><strong style="color:var(--bad)">Red bars (6 teams)</strong> have intervals entirely below zero. These are the franchises whose underperformance is statistically clear.</li>
+          <li><strong>Gray bars (17 teams)</strong> have intervals that cross zero — they're in the statistical noise, which means we can't reliably distinguish them from "league average front office."</li>
+        </ul>
+
+        <!-- TIER: GOOD -->
+        <div class="tier good">
+          <div class="tier-head">
+            <span class="tier-pill good">Skilled · Tier I</span>
+            <h4>Clearly above league average</h4>
+          </div>
+          <div class="tier-rows">
+            <div class="tier-row"><span class="rk">01</span><span class="team">Oakland Athletics</span><span class="wae">+7.6</span><span class="ci">95% CI +3.0 / +12.2</span></div>
+            <div class="tier-row"><span class="rk">02</span><span class="team">Los Angeles Dodgers</span><span class="wae">+6.8</span><span class="ci">95% CI +3.0 / +10.5</span></div>
+            <div class="tier-row"><span class="rk">03</span><span class="team">Cleveland Guardians</span><span class="wae">+6.6</span><span class="ci">95% CI +2.4 / +10.8</span></div>
+            <div class="tier-row"><span class="rk">04</span><span class="team">Tampa Bay Rays</span><span class="wae">+6.4</span><span class="ci">95% CI +1.3 / +11.4</span></div>
+            <div class="tier-row"><span class="rk">05</span><span class="team">Atlanta Braves</span><span class="wae">+5.4</span><span class="ci">95% CI +2.0 / +8.8</span></div>
+            <div class="tier-row"><span class="rk">06</span><span class="team">St. Louis Cardinals</span><span class="wae">+5.2</span><span class="ci">95% CI +2.1 / +8.2</span></div>
+            <div class="tier-row"><span class="rk">07</span><span class="team">New York Yankees</span><span class="wae">+3.4</span><span class="ci">95% CI +0.4 / +6.5</span></div>
+          </div>
+        </div>
+
+        <p>These seven are the answer to the headline question. The point estimates rank them 1 through 7, but the confidence intervals overlap heavily — A's through Cardinals are essentially statistically indistinguishable from each other. Calling A's "#1" and Cardinals "#6" overstates what the data can support. The honest reading: <strong>these are the seven front offices whose payroll skill is statistically clear</strong>, and the gap between any two of them inside that group is within the margin of error.</p>
+
+        <p>Two patterns stand out. Three of the seven (A's, Guardians, Rays) are bottom-third spenders running Moneyball-descended operations. Three more (Dodgers, Braves, Cardinals) are top-half spenders that <em>also</em> outperform what their money predicts — they're not buying their way in. And one franchise — the Dodgers — sits in a position no other large-payroll team reaches: spending like the Yankees, outperforming like the Athletics. That's the single most striking finding in the dataset: high payroll <em>and</em> high skill is possible, but only one franchise has actually pulled it off over the 26-year window.</p>
+
+        <!-- TIER: BAD -->
+        <div class="tier bad">
+          <div class="tier-head">
+            <span class="tier-pill bad">Unskilled · Tier III</span>
+            <h4>Clearly below league average</h4>
+          </div>
+          <div class="tier-rows">
+            <div class="tier-row"><span class="rk">25</span><span class="team">Pittsburgh Pirates</span><span class="wae">−3.6</span><span class="ci">95% CI −6.5 / −0.7</span></div>
+            <div class="tier-row"><span class="rk">26</span><span class="team">New York Mets</span><span class="wae">−3.6</span><span class="ci">95% CI −6.6 / −0.6</span></div>
+            <div class="tier-row"><span class="rk">27</span><span class="team">Baltimore Orioles</span><span class="wae">−5.3</span><span class="ci">95% CI −9.9 / −0.6</span></div>
+            <div class="tier-row"><span class="rk">28</span><span class="team">Kansas City Royals</span><span class="wae">−5.7</span><span class="ci">95% CI −9.1 / −2.3</span></div>
+            <div class="tier-row"><span class="rk">29</span><span class="team">Detroit Tigers</span><span class="wae">−6.0</span><span class="ci">95% CI −10.8 / −1.1</span></div>
+            <div class="tier-row"><span class="rk">30</span><span class="team">Colorado Rockies</span><span class="wae">−6.4</span><span class="ci">95% CI −10.9 / −1.9</span></div>
+          </div>
+        </div>
+
+        <p>Same caveat: these six are statistically indistinguishable from each other, but distinguishable as a group from "league average." Some are cheap and bad (Pirates, Royals), some are expensive and bad (Mets, Tigers, Orioles), and one (Rockies) has structural problems above any individual GM — Coors Field is a real confounder we can't strip out.</p>
+
+        <!-- TIER: MID -->
+        <div class="tier">
+          <div class="tier-head">
+            <span class="tier-pill mid">Inside the Noise · Tier II</span>
+            <h4>17 franchises indistinguishable from league average</h4>
+          </div>
+          <p style="font-family:var(--sans); font-size:14px; color:var(--ink-2); line-height:1.6; margin-top:18px;">Astros · Red Sox · Brewers · Blue Jays · Twins · Giants · Diamondbacks · Marlins · Cubs · Padres · Phillies · Mariners · Angels · White Sox · Rangers · Nationals · Reds</p>
+          <p>All have confidence intervals that cross zero. They've been good in some windows and bad in others, in roughly equal measure. The right read is "competently average over 26 years" — not because they don't try, but because 26 years of mixed results, given the noise level of MLB, isn't enough data to call them anything else.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-label">Methodology Note</div>
+          <h4>Why we don't use payroll-per-win</h4>
+          <p>If you've ever seen this question analyzed before, it was probably by <strong>cumulative dollars per win</strong> — total payroll divided by total wins, lowest is best.</p>
+          <figure class="chart narrow" style="margin: 24px 0;">
+            <div class="chart-svg loading" data-chart="dpw">Loading…</div>
+          </figure>
+          <p>Same direction as the skill ranking, but very different teams at the top. The Pirates rank #4 by $ per win and the Marlins rank #3 — both look like efficient operators. They're not. The problem with $ per win is that it rewards being <em>cheap</em> almost as much as it rewards being <em>good</em>. A team that pays $50M and wins 70 games has a $ per win of $714K; a team that pays $250M and wins 95 games has a $ per win of $2.63M. The cheap team looks 3.7× more "efficient" — but the cheap team is losing 92 games.</p>
+          <p>That's exactly what's happening at the top of the nominal ranking. The Pirates' 26-year average payroll is around $58M and their average win total is 74. The Marlins' average is $57M and 73 wins. Both teams sit in the top five by $ per win because they keep paying for the league's worst rosters. <strong>It's not skill — it's surrender.</strong></p>
+        </div>
+      </section>
+
+      <!-- ============== SECTION 5 ============== -->
+      <section id="s5">
+        <h2><span class="section-num">§ 05</span>Spotlights</h2>
+
+        <p>The 13 franchises below cover the ends of the skill distribution and the most-watched teams in MLB. Each profile leads with three numbers: <strong>mean WAE</strong> (Pythagorean wins above payroll-expected per season), <strong>payroll percentile</strong> (where they typically sit in the league's spending order, 0 = cheapest, 100 = most expensive), and <strong>playoff appearances / World Series titles</strong> in the 26-year window.</p>
+
+        <figure class="chart">
+          <div class="chart-svg loading" data-chart="quadrants">Loading…</div>
+          <figcaption><strong>Fig. 4 — Franchise positions in payroll-vs-skill space.</strong> The Dodgers occupy a quadrant no one else does: top-quartile spending and top-quartile skill, sustained.</figcaption>
+        </figure>
+
+        <h3>The clearly-skilled franchises</h3>
+
+        <!-- SPOTLIGHT: A's -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag good">Top Tier</span>
+            <div class="spotlight-team">Oakland Athletics</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val pos">+7.6</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">16</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">11</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">0</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The best front-office number in baseball, anchored by the lowest payroll position of any consistently-skilled team. The A's beat their predicted line by 7.6 Pythagorean wins per year on average and <strong>+18.3 wins per playoff season</strong> — sustained for 26 years. The 2001 team (102 wins on a $34M payroll, +27.9 WAE) is the second-best single season in the dataset.</p>
+            <p>The Moneyball operation produced contenders consistently — eleven Octobers — and zero rings. The franchise is the cleanest illustration of the structural ceiling from Section 2: skill at any payroll, championships only above the entry fee. The Sacramento relocation in 2025 closes the Oakland chapter.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Dodgers -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag good">Top Tier</span>
+            <div class="spotlight-team">Los Angeles Dodgers</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val pos">+6.8</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">86</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">17</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">3</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The single most surprising entry on the list — and the only large-payroll franchise that <em>consistently</em> outperforms its own expensive line. Every other top-tier team beats the payroll line from a cheap base; the Dodgers do it from the 86th percentile, meaning they spend in the top quartile <em>and</em> still produce 6.8 Pythagorean wins above what that spending predicts.</p>
+            <p>Their <strong>+11.3 mean WAE in playoff seasons</strong> is nearly double the all-season number — they don't just show up in October, they show up better than their roster predicts. Three titles in six years (2020, 2024, 2025) is what the only "paid-the-entry-fee + skill-premium" combination in the dataset produces.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Guardians -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag good">Top Tier</span>
+            <div class="spotlight-team">Cleveland Guardians</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val pos">+6.6</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">30</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">10</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">0</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The most sustained low-payroll success in the data — bottom-third spending almost every year, <strong>+14.2 WAE per playoff season</strong>, ten Octobers. The 2017 team (102 wins on a $125M payroll, +27.2 WAE) is one of the five best single-season performances in the dataset.</p>
+            <p>Notably, Cleveland is the <em>most</em> consistent franchise in the top tier — the smallest year-over-year swings, fewer down years than the A's or Rays. The structural ceiling has bitten them publicly twice: the 2016 World Series Game 7 loss and the 2024 ALCS exit. Same pattern as the A's: sustained contender, no champion.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Rays -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag good">Top Tier</span>
+            <div class="spotlight-team">Tampa Bay Rays</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val pos">+6.4</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">12</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">9</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">0</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The most extreme version of the Moneyball arc. The Rays sit in the league's bottom 12th percentile of spending every year and still post +6.4 WAE — and <strong>+19.6 WAE per playoff season, the highest playoff mark in baseball by a wide margin</strong>. The 2021 team (+28.2 WAE) is the single best season in the dataset.</p>
+            <p>They've produced two pennants (2008, 2020) and nine playoff appearances on payrolls typically one-fifth the Yankees'. Same structural-ceiling caveat: zero World Series, despite winning two pennants. The Rays are the model the rest of the league has spent two decades trying to copy and the cleanest case of "skill is real but capped without spending."</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Cardinals -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag good">Top Tier</span>
+            <div class="spotlight-team">St. Louis Cardinals</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val pos">+5.2</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">65</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">16</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">2</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The quietest rebuttal to the "skill = small market" framing. The Cardinals spend at the 65th percentile — well above league median — and still produce real skill above what that spending predicts. Their hallmark is durability: their worst season in 26 years is only <strong>−12.3 WAE</strong>, by far the tightest worst-case bound in the top tier.</p>
+            <p>They've made October sixteen times and won two rings in the window. The Cardinals prove that the skill premium isn't restricted to bargain-bin payrolls — and unlike the A's, Rays, and Guardians, they've also paid the entry fee often enough to win.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Braves -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag good">Top Tier</span>
+            <div class="spotlight-team">Atlanta Braves</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val pos">+5.4</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">62</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">16</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">1</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>Almost a structural twin of the Cardinals — same payroll tier, similar WAE, identical playoff count, one ring (2021). The recent run is built on locking in core players (Acuña, Albies, Riley, Olson) to long-term extensions before they hit free agency, which produces both above-line wins and a stable cost structure.</p>
+            <p>Their 2023 team (+17.8 WAE) is one of the best single seasons in the data outside the top-tier dynastic peaks.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Yankees -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag good">Top Tier</span>
+            <div class="spotlight-team">New York Yankees</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val pos">+3.4</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">98</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">21</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">2</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The smallest WAE in the clearly-skilled tier — but earned on the league's highest payroll position essentially every year. The Yankees pay for a near-guaranteed playoff slot (21 of 26 seasons, the most in MLB) <em>and</em> produce a +3.4 win skill premium on top of that spending. Their <strong>+6.1 WAE in playoff seasons</strong> — nearly double the all-season average — shows they're not "just buying the floor."</p>
+            <p>But the structural ceiling shows up clearly in their results: only two World Series in 26 years, and a long stretch of ALCS-or-earlier exits since 2009. Money buys consistency; only money plus October magic buys rings, and the Yankees rarely get the second.</p>
+          </div>
+        </div>
+
+        <h3>The clearly-unskilled franchises</h3>
+
+        <!-- SPOTLIGHT: Rockies -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag bad">Bottom Tier</span>
+            <div class="spotlight-team">Colorado Rockies</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val neg">−6.4</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">41</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">4</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">0</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The worst franchise number in the data. The Rockies spend at the 41st payroll percentile — squarely mid-pack — and produce 6.4 fewer Pythagorean wins per season than that spending predicts. The 2025 team (43 wins on a $112M payroll, <strong>−36.5 WAE</strong>) is the single worst season in the dataset.</p>
+            <p>21 of 26 seasons land below the league curve. Coors Field is a partial structural defense — the altitude genuinely warps pitcher development — but the consistency across three different GMs over 26 years suggests altitude alone doesn't account for the whole gap.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Tigers -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag bad">Bottom Tier</span>
+            <div class="spotlight-team">Detroit Tigers</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val neg">−6.0</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">57</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">7</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">0</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The clearest "spent and lost" franchise. The Tigers' 57th-percentile payroll predicts an above-average team; they produce a six-Pythagorean-win-below-average team year after year. The 2019 collapse (−30.3 WAE on a $102M payroll) is one of the five worst single seasons in the dataset.</p>
+            <p>The franchise has cycled through cheap-and-bad, expensive-and-good (Cabrera/Verlander/Scherzer), expensive-and-collapsing (those same contracts aging into dead money), and back to cheap-and-bad — every failure mode the methodology can detect, in one franchise.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Royals -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag bad">Bottom Tier</span>
+            <div class="spotlight-team">Kansas City Royals</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val neg">−5.7</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">25</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">3</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">1</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>A franchise whose entire 26-year story is one window. The 2013–2015 mini-dynasty produced two AL pennants and the 2015 World Series title — the only ring won at bottom-quartile payroll in our dataset, by any team.</p>
+            <p>The rest of the period is long stretches of clearly-unskilled play. The −5.7 mean WAE shows what happens when even a cheap operation produces below-line baseball more often than not: low payrolls don't insulate against losing residuals; they just lose less expensively.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Orioles -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag bad">Bottom Tier</span>
+            <div class="spotlight-team">Baltimore Orioles</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val neg">−5.3</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">41</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">5</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">0</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>Most volatile franchise in the bottom tier. The 2018 collapse (47-115, $143M payroll, <strong>−27.9 WAE</strong>) is one of the most expensive single-season failures in the data — exactly the kind of season that gets a GM fired.</p>
+            <p>But the recent rebuild produced the 2023 AL East title and a <strong>+19.8 WAE</strong>, the highest single-season peak in any unskilled franchise's record. The current numbers reflect a 26-year average dragged down by the bad stretches; if the recent trajectory holds, Baltimore could exit the bottom tier within a decade.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Mets -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag bad">Bottom Tier</span>
+            <div class="spotlight-team">New York Mets</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val neg">−3.6</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">76</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">6</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">0</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The exact inverse of the Yankees and Dodgers. Top-quartile spending (76th percentile), below-average skill (−3.6 WAE). Zero World Series in the window, six playoff appearances, and three of the last four seasons featuring $250M+ payrolls.</p>
+            <p>The Mets are the clearest single piece of evidence in the data that money alone — without the skill premium the Dodgers and Yankees layer on top — does not buy proportional wins. Their 2003 team (−19.5 WAE on a $117M payroll) ranks in the ten worst seasons in the dataset.</p>
+          </div>
+        </div>
+
+        <!-- SPOTLIGHT: Pirates -->
+        <div class="spotlight">
+          <aside class="spotlight-stats">
+            <span class="spotlight-tag bad">Bottom Tier</span>
+            <div class="spotlight-team">Pittsburgh Pirates</div>
+            <div class="stat"><span class="stat-lbl">Mean WAE</span><span class="stat-val neg">−3.6</span></div>
+            <div class="stat"><span class="stat-lbl">Payroll Pct.</span><span class="stat-val">13</span></div>
+            <div class="stat"><span class="stat-lbl">Playoff Trips</span><span class="stat-val">3</span></div>
+            <div class="stat"><span class="stat-lbl">Titles</span><span class="stat-val">0</span></div>
+          </aside>
+          <div class="spotlight-body">
+            <p>The poster franchise for "cheap is not the same as skilled" — and the most direct rebuttal to the nominal dollars-per-win ranking. The Pirates spend at the 13th payroll percentile, among the lowest in baseball, and <em>still</em> produce 3.6 fewer Pythagorean wins than even that minimal spending predicts.</p>
+            <p>The 2013–2015 mini-window is their only sustained period above the line; the other 23 years are 90-loss seasons priced at $58M. The Pirates rank #4 by nominal dollars per win because of the small denominator — but their skill ranking is honestly bad.</p>
+          </div>
+        </div>
+
+        <h3>Individual seasons worth noting</h3>
+
+        <figure class="chart">
+          <div class="chart-svg loading" data-chart="extremes">Loading…</div>
+          <figcaption><strong>Fig. 5 — Top 5 and bottom 5 team-seasons by WAE.</strong> The extremes track the franchise tiers: the highest peaks come from clearly-skilled front offices, the lowest troughs from clearly-unskilled ones.</figcaption>
+        </figure>
+
+        <p>Single team-seasons aren't really front-office report cards — they're one year of roster execution. But the extremes are worth a glance: the 2021 Rays (+28.2 WAE), 2001 A's (+27.9), and 2017 Guardians (+27.2) are the three highest peaks in the data, all from clearly-skilled front offices. The 2025 Rockies (−36.5), 2024 White Sox (−31.3), and 2019 Tigers (−30.3) are the lowest troughs, two of three from clearly-unskilled front offices. The pattern is consistent: front-office quality compounds into the standout seasons too.</p>
+      </section>
+
+      <!-- ============== SECTION 6 ============== -->
+      <section id="s6">
+        <h2><span class="section-num">§ 06</span>Caveats and Open Questions</h2>
+
+        <p>A few honest limitations worth surfacing:</p>
+
+        <h4>The R² is what it is</h4>
+        <p>Payroll explains about 15% of within-season variance in Pythagorean wins. The residual we're measuring contains real front-office skill, but also some noise (injury luck, opponent quality, divisional strength, the bounces that Pythagorean wins don't capture). 26 seasons smooths most of it out — which is why we put statistical tiers on the rankings rather than treating ranks 1 through 30 as meaningful.</p>
+
+        <h4>Opening Day payroll misses mid-season activity</h4>
+        <p>A team that adds a $30M deadline rental gets the wins from that player but not the cost in our measure. The Dodgers in particular spend aggressively at the deadline; a sensitivity analysis using end-of-season cash payroll or CBT (Competitive Balance Tax) payroll would shift their +6.8 WAE somewhat downward (and the Yankees' and the Mets' similarly). MLB itself uses CBT payroll as the unit that "counts" for spending purposes — switching to it would tell a marginally different story.</p>
+
+        <h4>Franchise ≠ GM, and that's a real limitation</h4>
+        <p>We've treated each franchise as one continuous front-office story over 26 years. That's a simplification with consequences. Some franchises have had one GM the whole period (the Yankees: Cashman, 1998+); others have had four (the Mets); a few have had clean before-and-after regimes that show up clearly in the per-season data. Aggregating those regimes into a single franchise number washes out real variation. <strong>The natural follow-up to this report is to split franchise rankings by GM tenure</strong> — that would tell us not just "which front offices are best" but "which specific people built them."</p>
+
+        <h4>The Rockies might be Coors Field, not bad GMs</h4>
+        <p>The 26 years of red on Colorado include three GMs all hitting the same wall. Either the franchise has been singularly unlucky in its hiring or the altitude is doing structural damage that no roster construction can overcome. The data can't separate those.</p>
+
+        <h4>The era boundary at 2011/2012 isn't statistically tested</h4>
+        <p>We note that the league's predictive power dropped meaningfully after the second wild card; a formal changepoint analysis would either validate it or find a different boundary.</p>
+      </section>
+
+      <!-- ============== SECTION 7 ============== -->
+      <section id="s7">
+        <h2><span class="section-num">§ 07</span>The TL;DR</h2>
+
+        <div class="tldr">
+          <ul>
+            <li><strong>Seven franchises have demonstrably built above their payroll over 26 years:</strong> Athletics, Dodgers, Guardians, Rays, Braves, Cardinals, Yankees. Their 95% confidence intervals are entirely above zero. They're statistically indistinguishable from each other inside that group.</li>
+            <li><strong>The most surprising name in the top tier is the Dodgers</strong> — the only franchise in the dataset that combines large-payroll spending with consistent above-curve overperformance. Three titles in six years (2020, 2024, 2025) is what that combination, sustained, produces.</li>
+            <li><strong>Six franchises have demonstrably underperformed their payroll:</strong> Rockies, Tigers, Royals, Orioles, Mets, Pirates. Some are cheap and bad, some are expensive and bad.</li>
+            <li><strong>The other 17 franchises are in the noise</strong> — competent or incompetent in different windows but not enough to distinguish from league average over 26 years.</li>
+            <li><strong>Front-office skill operates inside a hard structural ceiling.</strong> Money buys regular-season wins, playoff appearances, and — critically — the entry fee to actually win the World Series (25 of 26 titles came from the top three quintiles). The A's and Rays prove you can build a contender at any payroll. They don't show you can build a champion at any payroll.</li>
+            <li><strong>The franchise unit hides real variation.</strong> Some franchises had four GMs in 26 years; some had one. The natural follow-up is to redo this analysis by GM tenure to answer not just "which franchises are best" but "which specific people built them."</li>
+          </ul>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="container">
+    <div class="footer-mark">
+      <svg width="36" height="36" viewBox="0 0 30 30" aria-hidden="true">
+        <polygon points="15,3 27,15 15,27 3,15" fill="none" stroke="#1a1612" stroke-width="1.6"/>
+        <line x1="15" y1="27" x2="15" y2="15" stroke="#1a1612" stroke-width="1"/>
+        <line x1="15" y1="15" x2="27" y2="15" stroke="#1a1612" stroke-width="1"/>
+        <circle cx="15" cy="15" r="2.2" fill="#8a2422"/>
+      </svg>
+      <div class="footer-mark-words">
+        <div class="footer-title">Front Office <em>Scorecard</em></div>
+        <div class="footer-sub">Issue No. 11 · May 2026 · Volume IV</div>
+      </div>
+    </div>
+    <div class="footer-body">
+      <p>Generated from a Python pipeline that pulls regular-season standings (runs scored, runs allowed) from the MLB Stats API, joins them with Opening Day payrolls compiled from Spotrac, USA Today, and The Baseball Cube, computes Pythagorean wins using the pythagenpat formula, and fits per-season OLS regressions of Pythagorean wins on log(payroll).</p>
+      <div class="signature-line">
+        <div class="sig-cell"><span class="k">SCORER</span><span class="v">A. Blaine</span></div>
+        <div class="sig-cell"><span class="k">DATE</span><span class="v">2026.05.24</span></div>
+        <div class="sig-cell"><span class="k">VERSION</span><span class="v">v2.1</span></div>
+        <div class="sig-cell"><span class="k">SOURCE</span><span class="v">MLB Stats API · Spotrac · USA Today</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script src="js/charts.js"></script>
+
+<script>
+  // active TOC link on scroll
+  const sections = document.querySelectorAll('.article > section[id]');
+  const links = document.querySelectorAll('.toc a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  // smooth scrolling
+  links.forEach(a => a.addEventListener('click', (e) => {
+    const href = a.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const el = document.querySelector(href);
+      if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+    }
+  }));
+</script>
+
+</body>
+</html>

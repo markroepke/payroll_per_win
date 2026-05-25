@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Claude Code local config
+.claude/
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
